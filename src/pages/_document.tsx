@@ -6,7 +6,12 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://github.com/josejefferson.png"
+        />
       </Head>
       <body>
         <Main />

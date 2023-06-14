@@ -2,6 +2,7 @@ import { Avatar } from '@chakra-ui/avatar'
 import { Button, ButtonGroup, IconButton } from '@chakra-ui/button'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
+import { useToast } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 import { IoMdMenu } from 'react-icons/io'
@@ -14,6 +15,18 @@ const COLORS = [
 ]
 
 export default function Navbar() {
+  const toast = useToast()
+
+  const portfolioWarning = () => {
+    toast({
+      title: 'Atenção',
+      description: 'O portfólio não está pronto ainda',
+      status: 'warning',
+      duration: 5000,
+      isClosable: true
+    })
+  }
+
   const isDesktop = useBreakpointValue({ base: false, md: true })
   const [navbarColor, setNavbarColor] = useState(0)
 
@@ -59,19 +72,29 @@ export default function Navbar() {
             {isDesktop ? (
               <ButtonGroup variant="link" spacing="8">
                 <Link href="#inicio">
-                  <Button colorScheme={link}>Início</Button>
+                  <Button onClick={portfolioWarning} colorScheme={link}>
+                    Início
+                  </Button>
                 </Link>
                 <Link href="#section2">
-                  <Button colorScheme={link}>Sobre</Button>
+                  <Button onClick={portfolioWarning} colorScheme={link}>
+                    Sobre
+                  </Button>
                 </Link>
                 <Link href="#habilidades">
-                  <Button colorScheme={link}>Habilidades</Button>
+                  <Button onClick={portfolioWarning} colorScheme={link}>
+                    Habilidades
+                  </Button>
                 </Link>
                 <Link href="#trabalhos">
-                  <Button colorScheme={link}>Trabalhos</Button>
+                  <Button onClick={portfolioWarning} colorScheme={link}>
+                    Trabalhos
+                  </Button>
                 </Link>
                 <Link href="#contato">
-                  <Button colorScheme={link}>Contato</Button>
+                  <Button onClick={portfolioWarning} colorScheme={link}>
+                    Contato
+                  </Button>
                 </Link>
               </ButtonGroup>
             ) : (

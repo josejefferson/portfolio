@@ -13,10 +13,10 @@ export default function Home() {
       <Navbar />
       <Box className="sections">
         <MainSection />
+        {/* <Section2 />
         <Section2 />
         <Section2 />
-        <Section2 />
-        <Section2 />
+        <Section2 /> */}
       </Box>
     </>
   )

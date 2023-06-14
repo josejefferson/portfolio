@@ -9,11 +9,11 @@ import {
   Image,
   Stack,
   Tooltip,
-  chakra
+  chakra,
+  useToast
 } from '@chakra-ui/react'
-import styles from './main.module.css'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import Link from 'next/link'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 
 export default function MainSection() {
   return (
@@ -29,6 +29,18 @@ export default function MainSection() {
 }
 
 function Details() {
+  const toast = useToast()
+
+  const portfolioWarning = () => {
+    toast({
+      title: 'Atenção',
+      description: 'O portfólio não está pronto ainda',
+      status: 'warning',
+      duration: 5000,
+      isClosable: true
+    })
+  }
+
   return (
     <Flex direction="column" justify="center" w="fit-content">
       <Box mt={[4, 0]}>
@@ -43,7 +55,9 @@ function Details() {
           Desenvolvedor web
         </Heading>
         <HStack mt={[4, 10]}>
-          <Button size="lg">Saiba mais</Button>
+          <Button size="lg" onClick={portfolioWarning}>
+            Saiba mais
+          </Button>
           <Link href="https://github.com/josejefferson" target="_blank">
             <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
               <IconButton aria-label="GitHub" size="lg" variant="ghost" color="black">
