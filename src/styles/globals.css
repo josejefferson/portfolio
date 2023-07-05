@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth !important;
@@ -5,9 +7,73 @@
 
 html {
   scroll-padding-top: 64px;
+  scroll-snap-type: y proximity;
 }
 
 body {
   height: 100vh;
   scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.skill-card {
+  opacity: 0;
+}
+
+.animate-skill {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.animate-skill .skill .skill-image {
+  animation-delay: inherit !important;
+  animation-fill-mode: both !important;
+  animation: zoom 0.5s ease;
+}
+
+.animate-skill .skill .skill-name {
+  animation-delay: inherit !important;
+  animation-fill-mode: both !important;
+  animation: fade 0.5s ease;
+}
+
+.animate-skill .skill .skill-bar {
+  animation-delay: inherit !important;
+  animation-fill-mode: both !important;
+  animation: fade 0.5s ease;
+}
+
+.animate-skill .skill .skill-bar > div {
+  animation-delay: inherit !important;
+  animation-fill-mode: both !important;
+  animation: width 2s ease;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

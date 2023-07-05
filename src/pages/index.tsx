@@ -1,6 +1,7 @@
 import Navbar from '#components/navbar/navbar'
+import LanguagesSection from '#components/sections/languages'
 import MainSection from '#components/sections/main'
-import Section2 from '#components/sections/section2'
+import SkillsSection from '#components/sections/skills'
 import { Box } from '@chakra-ui/layout'
 import Head from 'next/head'
 
@@ -13,10 +14,8 @@ export default function Home() {
       <Navbar />
       <Box className="sections">
         <MainSection />
-        {/* <Section2 />
-        <Section2 />
-        <Section2 />
-        <Section2 /> */}
+        <LanguagesSection />
+        <SkillsSection />
       </Box>
     </>
   )

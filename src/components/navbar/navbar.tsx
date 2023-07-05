@@ -9,7 +9,8 @@ import { IoMdMenu } from 'react-icons/io'
 
 const COLORS = [
   ['white', 'black', 'primary'],
-  ['green.600', 'white', 'white'],
+  ['black', 'white', 'white'],
+  ['purple.800', 'white', 'white'],
   ['yellow.600', 'white', 'white'],
   ['blue.600', 'white', 'white']
 ]
@@ -72,21 +73,15 @@ export default function Navbar() {
             {isDesktop ? (
               <ButtonGroup variant="link" spacing="8">
                 <Link href="#inicio">
-                  <Button onClick={portfolioWarning} colorScheme={link}>
-                    Início
-                  </Button>
+                  <Button colorScheme={link}>Início</Button>
                 </Link>
-                <Link href="#section2">
-                  <Button onClick={portfolioWarning} colorScheme={link}>
-                    Sobre
-                  </Button>
+                <Link href="#linguagens">
+                  <Button colorScheme={link}>Linguagens</Button>
                 </Link>
                 <Link href="#habilidades">
-                  <Button onClick={portfolioWarning} colorScheme={link}>
-                    Habilidades
-                  </Button>
+                  <Button colorScheme={link}>Habilidades</Button>
                 </Link>
-                <Link href="#trabalhos">
+                {/* <Link href="#trabalhos">
                   <Button onClick={portfolioWarning} colorScheme={link}>
                     Trabalhos
                   </Button>
@@ -95,7 +90,7 @@ export default function Navbar() {
                   <Button onClick={portfolioWarning} colorScheme={link}>
                     Contato
                   </Button>
-                </Link>
+                </Link> */}
               </ButtonGroup>
             ) : (
               <IconButton variant="ghost" icon={<IoMdMenu />} aria-label="Open Menu" />
