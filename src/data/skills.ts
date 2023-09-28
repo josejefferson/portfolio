@@ -5,14 +5,12 @@ export const SKILLS = [
     items: [
       {
         name: 'TypeScript',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         skill: 80
       },
       {
         name: 'JavaScript',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
         skill: 90
       },
       {
@@ -63,8 +61,7 @@ export const SKILLS = [
       },
       {
         name: 'Angular JS',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
         skill: 40
       },
       {
@@ -79,14 +76,12 @@ export const SKILLS = [
       },
       {
         name: 'Prisma',
-        image:
-          'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_light_prisma_icon_130444.png',
+        image: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_light_prisma_icon_130444.png',
         skill: 85
       },
       {
         name: 'Bootstrap',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
         skill: 100
       }
     ]
@@ -112,8 +107,7 @@ export const SKILLS = [
       },
       {
         name: 'GitHub',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg',
         skill: 90
       },
       {
@@ -123,8 +117,7 @@ export const SKILLS = [
       },
       {
         name: 'PostgreSQL',
-        image:
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
         skill: 70
       },
       {

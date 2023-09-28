@@ -2,54 +2,17 @@ import { Avatar } from '@chakra-ui/avatar'
 import { Button, ButtonGroup, IconButton } from '@chakra-ui/button'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
-import { useToast } from '@chakra-ui/react'
 import Link from 'next/link'
-import { useCallback, useEffect, useState } from 'react'
 import { IoMdMenu } from 'react-icons/io'
 
-const COLORS = [
-  ['white', 'black', 'primary'],
-  ['black', 'white', 'white'],
-  ['purple.800', 'white', 'white'],
-  ['yellow.600', 'white', 'white'],
-  ['blue.600', 'white', 'white']
-]
-
 export default function Navbar() {
-  const toast = useToast()
-
-  const portfolioWarning = () => {
-    toast({
-      title: 'Atenção',
-      description: 'O portfólio não está pronto ainda',
-      status: 'warning',
-      duration: 5000,
-      isClosable: true
-    })
-  }
-
   const isDesktop = useBreakpointValue({ base: false, md: true })
-  const [navbarColor, setNavbarColor] = useState(0)
-
-  const changeBackground = useCallback(() => {
-    const i = Math.floor(window.scrollY / (window.innerHeight - 64 - 1))
-    if (navbarColor !== i) setNavbarColor(i)
-  }, [navbarColor])
-
-  useEffect(() => {
-    changeBackground()
-    window.addEventListener('scroll', changeBackground)
-    return () => window.removeEventListener('scroll', changeBackground)
-  }, [changeBackground])
-
-  const [bg, color, link] = COLORS[navbarColor] || ['white', 'black', 'primary']
 
   return (
     <>
       <Box
         as="nav"
-        bg={bg}
-        color={color}
+        bg="black"
         boxShadow="sm"
         h="64px"
         display="flex"
@@ -58,7 +21,7 @@ export default function Navbar() {
         top="0"
         left="0"
         w="full"
-        zIndex="1"
+        zIndex="100"
         transition="all 0.2s ease"
       >
         <Container maxW="6xl">
@@ -73,27 +36,20 @@ export default function Navbar() {
             {isDesktop ? (
               <ButtonGroup variant="link" spacing="8">
                 <Link href="#inicio">
-                  <Button colorScheme={link}>Início</Button>
+                  <Button colorScheme="primary">Início</Button>
                 </Link>
                 <Link href="#linguagens">
-                  <Button colorScheme={link}>Linguagens</Button>
+                  <Button colorScheme="primary">Linguagens</Button>
                 </Link>
                 <Link href="#habilidades">
-                  <Button colorScheme={link}>Habilidades</Button>
+                  <Button colorScheme="primary">Habilidades</Button>
                 </Link>
-                {/* <Link href="#trabalhos">
-                  <Button onClick={portfolioWarning} colorScheme={link}>
-                    Trabalhos
-                  </Button>
+                <Link href="#projetos">
+                  <Button colorScheme="primary">Projetos</Button>
                 </Link>
-                <Link href="#contato">
-                  <Button onClick={portfolioWarning} colorScheme={link}>
-                    Contato
-                  </Button>
-                </Link> */}
               </ButtonGroup>
             ) : (
-              <IconButton variant="ghost" icon={<IoMdMenu />} aria-label="Open Menu" />
+              <IconButton variant="ghost" icon={<IoMdMenu />} aria-label="Abrir menu" />
             )}
           </HStack>
         </Container>

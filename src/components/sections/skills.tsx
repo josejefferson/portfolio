@@ -1,3 +1,4 @@
+import { SectionTitle } from '#components/common/section-title'
 import { SKILLS } from '#data/skills'
 import {
   Box,
@@ -18,22 +19,12 @@ import { InView } from 'react-intersection-observer'
 
 export default function SkillsSection() {
   return (
-    <chakra.section h="calc(100vh - 64px)" id="habilidades">
-      <Flex direction="column" h="full">
-        <Box
-          bg="purple.600"
-          color="white"
-          textAlign="center"
-          fontSize="4xl"
-          py="3"
-          position="sticky"
-          top="64px"
-          fontFamily="Nunito"
-        >
-          Habilidades
-        </Box>
-        <Flex h="full">
-          <Container maxW="6xl" h="full">
+    <chakra.section id="habilidades">
+      <Flex direction="column">
+        <SectionTitle title="Habilidades" color="blue.500" />
+
+        <Flex>
+          <Container maxW="6xl">
             <SimpleGrid columns={[1, 1, 3]} spacing={5} py={5} h="full">
               {SKILLS.map((skill, i) => (
                 <SkillCard {...skill} key={i} />
@@ -75,21 +66,8 @@ function SkillCard({ title, color, items }: ISkillCardProps) {
           <Divider borderWidth={1} />
           <CardBody>
             {items.map((item, i) => (
-              <Flex
-                mb={3}
-                gap={3}
-                key={i}
-                className="skill"
-                sx={{ animationDelay: `${i * 100}ms !important` }}
-              >
-                <Image
-                  className="skill-image"
-                  w={10}
-                  h={10}
-                  src={item.image}
-                  alt="Ícone"
-                  objectFit="contain"
-                />
+              <Flex mb={3} gap={3} key={i} className="skill" sx={{ animationDelay: `${i * 100}ms !important` }}>
+                <Image className="skill-image" w={10} h={10} src={item.image} alt="Ícone" objectFit="contain" />
                 <Box flex="1" sx={{ animationDelay: `${i * 100}ms !important` }}>
                   <Text fontWeight={500} mb={2} className="skill-name">
                     {item.name}

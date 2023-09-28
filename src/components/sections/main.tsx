@@ -60,7 +60,7 @@ function Details() {
           </Button>
           <Link href="https://github.com/josejefferson" target="_blank">
             <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
-              <IconButton aria-label="GitHub" size="lg" variant="ghost" color="black">
+              <IconButton aria-label="GitHub" size="lg" variant="ghost" color="white">
                 <IoLogoGithub size={36} />
               </IconButton>
             </Tooltip>
