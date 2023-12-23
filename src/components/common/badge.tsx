@@ -1,4 +1,4 @@
-import { IBadge } from '#types/badge'
+import { IBadge } from '#/data/badges'
 import { Flex, Text, Tooltip } from '@chakra-ui/react'
 
 interface IBadgeProps extends IBadge {}

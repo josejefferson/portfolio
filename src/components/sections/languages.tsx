@@ -1,27 +1,44 @@
-import { SectionTitle } from '#components/common/section-title'
-import { Box, Center, Flex, chakra } from '@chakra-ui/react'
+import { IMainTechnology, MAIN_TECHNOLOGIES } from '#/data/main-technologies'
+import { Box, Card, Flex, HStack, Image, Text } from '@chakra-ui/react'
+import { sectionIDs } from '.'
+import Section from '../common/section'
+import Link from 'next/link'
 
-export default function LanguagesSection() {
+export default function Languages() {
   return (
-    <chakra.section h="calc(100vh - 64px)" id="linguagens">
-      <Flex direction="column" h="full">
-        <SectionTitle title="Principais linguagens" color="red.500" />
-
-        <Flex h="full" fontSize={['4xl', '5xl', '7xl', '8xl']} textAlign="center">
-          <Center flexDirection="column" bg="#ead41c" w="50%" h="full" color="black">
-            <chakra.div fontSize={['7xl', '8xl', '9xl']} fontWeight={600}>
-              JS
-            </chakra.div>
-            JavaScript
-          </Center>
-          <Center flexDirection="column" bg="#2f72bc" w="50%" h="full" color="white">
-            <chakra.div fontSize={['7xl', '8xl', '9xl']} fontWeight={600}>
-              TS
-            </chakra.div>
-            TypeScript
-          </Center>
-        </Flex>
+    <Section id={sectionIDs.languages} title="Principais tecnologias" titleColor="orange.500">
+      <Flex justify="center" overflowX="auto">
+        <Box display="inline-block" mx="auto">
+          <HStack spacing={[3, 5]} m={[3, 5]}>
+            {MAIN_TECHNOLOGIES.map((tech, i) => (
+              <TechnologyCard tech={tech} key={i} />
+            ))}
+          </HStack>
+        </Box>
       </Flex>
-    </chakra.section>
+    </Section>
+  )
+}
+
+export function TechnologyCard({ tech }: { tech: IMainTechnology }) {
+  const { technology, cardColor } = tech
+
+  return (
+    <Link href={technology.site || 'javascript:void(0)'} target="_blank">
+      <Card
+        flexShrink={0}
+        p={[2, 4]}
+        textAlign="center"
+        bg={`${cardColor}.900`}
+        _hover={{ bg: `${cardColor}.800` }}
+        _active={{ bg: `${cardColor}.700` }}
+        transition=".2s ease"
+      >
+        <Image src={technology.image} alt={technology.name} w={[100, 200]} h={[100, 200]} objectFit="contain" />
+        <Text fontSize={['md', 'xl']} mt={[2, 4]}>
+          {technology.name}
+        </Text>
+      </Card>
+    </Link>
   )
 }

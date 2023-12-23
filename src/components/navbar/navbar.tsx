@@ -1,12 +1,15 @@
 import { Avatar } from '@chakra-ui/avatar'
-import { Button, ButtonGroup, IconButton } from '@chakra-ui/button'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
 import Link from 'next/link'
-import { IoMdMenu } from 'react-icons/io'
+import ScrollToTop from '../common/scroll-top'
+import NavDesktop from './nav-desktop'
+import NavMobile from './nav-mobile'
+import Social from './social'
 
-export default function Navbar() {
-  const isDesktop = useBreakpointValue({ base: false, md: true })
+export default function Navbar({ projectName }: { projectName?: string }) {
+  const breakpointMd = useBreakpointValue({ base: false, md: true })
+  const breakpointLg = useBreakpointValue({ base: false, lg: true })
 
   return (
     <>
@@ -23,38 +26,26 @@ export default function Navbar() {
         w="full"
         zIndex="100"
         transition="all 0.2s ease"
+        borderBottom="1px solid"
+        borderBottomColor="gray.500"
       >
         <Container maxW="6xl">
           <HStack spacing="10" justify="space-between">
-            <HStack borderWidth={1} rounded="full" p={1} position="relative">
-              <Avatar src="https://github.com/josejefferson.png" size="sm" />
-              <Text fontWeight={500} px={2} hidden={!isDesktop}>
-                Jefferson Dantas
-              </Text>
-            </HStack>
+            <Link href="/">
+              <HStack borderWidth={1} rounded="full" p={1} position="relative">
+                <Avatar src="https://github.com/josejefferson.png" size="sm" />
+                <Text fontWeight={500} px={2} hidden={!breakpointLg}>
+                  {projectName || 'Jefferson Dantas'}
+                </Text>
+              </HStack>
+            </Link>
 
-            {isDesktop ? (
-              <ButtonGroup variant="link" spacing="8">
-                <Link href="#inicio">
-                  <Button colorScheme="primary">Início</Button>
-                </Link>
-                <Link href="#linguagens">
-                  <Button colorScheme="primary">Linguagens</Button>
-                </Link>
-                <Link href="#habilidades">
-                  <Button colorScheme="primary">Habilidades</Button>
-                </Link>
-                <Link href="#projetos">
-                  <Button colorScheme="primary">Projetos</Button>
-                </Link>
-              </ButtonGroup>
-            ) : (
-              <IconButton variant="ghost" icon={<IoMdMenu />} aria-label="Abrir menu" />
-            )}
+            {!projectName && (breakpointMd ? <NavDesktop /> : <NavMobile />)}
           </HStack>
         </Container>
       </Box>
       <Box h="64px" />
+      <ScrollToTop />
     </>
   )
 }

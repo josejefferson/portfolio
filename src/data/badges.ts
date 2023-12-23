@@ -1,7 +1,14 @@
-import { IBadge } from '#types/badge'
+import { IconType } from 'react-icons'
 import { MdCode, MdHourglassTop, MdLock } from 'react-icons/md'
 
-export const BADGES: Record<string, IBadge> = {
+export interface IBadge {
+  color: string
+  icon: IconType
+  text: string
+  tip?: string
+}
+
+export const BADGES = {
   development: {
     text: 'Em desenvolvimento',
     icon: MdHourglassTop,
@@ -20,4 +27,4 @@ export const BADGES: Record<string, IBadge> = {
     color: 'gray',
     tip: 'Este projeto não está disponível ao público geral'
   }
-}
+} satisfies Record<string, IBadge>

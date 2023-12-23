@@ -1,46 +1,44 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  HStack,
-  Heading,
-  IconButton,
-  Image,
-  Stack,
-  Tooltip,
-  chakra,
-  useToast
-} from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
+import useScrollPosition from '@react-hook/window-scroll'
 import Link from 'next/link'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
+import Section from '../common/section'
+import { sectionIDs } from '.'
 
-export default function MainSection() {
+export default function Main() {
   return (
-    <chakra.section h="calc(100vh - 64px)" id="inicio">
-      <Container maxW="6xl" h="full">
+    <Section id={sectionIDs.main} screenHeight>
+      <Container maxW="6xl" h="full" display="flex" flexDirection="column">
         <Stack direction={['column', 'row']} justify="space-between" h="full">
           <Details />
           <Photo />
         </Stack>
+        <ScrollToSeeMore />
       </Container>
-    </chakra.section>
+    </Section>
+  )
+}
+
+function ScrollToSeeMore() {
+  const scrollY = useScrollPosition(10)
+
+  const isVisible = scrollY <= 0
+
+  return (
+    <Text
+      textAlign="center"
+      my={4}
+      fontSize={12}
+      fontWeight={200}
+      opacity={isVisible ? 1 : 0}
+      transition="opacity .2s ease"
+    >
+      Role a página para mais informações
+    </Text>
   )
 }
 
 function Details() {
-  const toast = useToast()
-
-  const portfolioWarning = () => {
-    toast({
-      title: 'Atenção',
-      description: 'O portfólio não está pronto ainda',
-      status: 'warning',
-      duration: 5000,
-      isClosable: true
-    })
-  }
-
   return (
     <Flex direction="column" justify="center" w="fit-content">
       <Box mt={[4, 0]}>
@@ -54,25 +52,36 @@ function Details() {
         <Heading fontSize={['xl', '2xl', '3xl', '4xl']} mt={[2, 6]}>
           Desenvolvedor web
         </Heading>
-        <HStack mt={[4, 10]}>
-          <Button size="lg" onClick={portfolioWarning}>
-            Saiba mais
-          </Button>
+        <Stack mt={[4, 10]} direction={['column', 'row']}>
           <Link href="https://github.com/josejefferson" target="_blank">
             <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
-              <IconButton aria-label="GitHub" size="lg" variant="ghost" color="white">
-                <IoLogoGithub size={36} />
-              </IconButton>
+              <Button
+                aria-label="GitHub"
+                size="lg"
+                variant="outline"
+                color="white"
+                leftIcon={<IoLogoGithub size={36} />}
+                px={2}
+              >
+                josejefferson
+              </Button>
             </Tooltip>
           </Link>
           <Link href="https://www.linkedin.com/in/jose-jefferson/" target="_blank">
             <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
-              <IconButton aria-label="LinkedIn" size="lg" variant="ghost" colorScheme="linkedin">
-                <IoLogoLinkedin size={36} />
-              </IconButton>
+              <Button
+                aria-label="LinkedIn"
+                size="lg"
+                variant="outline"
+                colorScheme="linkedin"
+                leftIcon={<IoLogoLinkedin size={36} />}
+                px={2}
+              >
+                jose-jefferson
+              </Button>
             </Tooltip>
           </Link>
-        </HStack>
+        </Stack>
       </Box>
     </Flex>
   )
@@ -80,7 +89,7 @@ function Details() {
 
 function Photo() {
   return (
-    <Flex direction="column" align="center" justify="center" ml="auto" h="full">
+    <Flex direction="column" align="center" justify="center" h="full">
       <Box position="relative" w="fit-content">
         <Image
           src="https://github.com/josejefferson.png"
