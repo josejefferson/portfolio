@@ -24,9 +24,17 @@ export function TechnologyCard({ tech }: { tech: IMainTechnology }) {
   const { technology, cardColor } = tech
 
   return (
-    <Link href={technology.site || 'javascript:void(0)'} target="_blank">
+    <Link
+      href={technology.site || ''}
+      target="_blank"
+      onClick={(e) => {
+        if (technology.site) return
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+      style={{ flexShrink: 0 }}
+    >
       <Card
-        flexShrink={0}
         p={[2, 4]}
         textAlign="center"
         bg={`${cardColor}.900`}

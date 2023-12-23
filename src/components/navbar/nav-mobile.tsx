@@ -11,30 +11,45 @@ import {
   useDisclosure
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { IoMdMenu } from 'react-icons/io'
+import { useRef } from 'react'
+import { MdMoreVert } from 'react-icons/md'
 import Social from './social'
 
 export default function NavMobile() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = useRef<HTMLButtonElement>(null)
 
   return (
     <>
       <HStack>
         <Social />
-        <IconButton variant="ghost" icon={<IoMdMenu />} aria-label="Abrir menu de navegação" onClick={onOpen} />
+        <IconButton
+          ref={btnRef}
+          variant="ghost"
+          icon={<MdMoreVert />}
+          aria-label="Abrir menu de navegação"
+          onClick={onOpen}
+        />
       </HStack>
 
-      <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="top" onClose={onClose} isOpen={isOpen} finalFocusRef={btnRef}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>
             <CloseButton ml="auto" onClick={onClose} />
             {NAVIGATION.map((item, i) => (
-              <Link href={item.href} onClick={onClose} key={i}>
-                <Button colorScheme="primary" variant="link" py={3} display="block" w="full">
-                  {item.name}
-                </Button>
-              </Link>
+              <Button
+                as={Link}
+                href={item.href}
+                onClick={onClose}
+                colorScheme="primary"
+                variant="link"
+                py={3}
+                w="full"
+                key={i}
+              >
+                {item.name}
+              </Button>
             ))}
           </DrawerBody>
         </DrawerContent>

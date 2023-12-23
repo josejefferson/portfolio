@@ -7,16 +7,23 @@
 
 html {
   scroll-padding-top: 64px;
-  /* scroll-snap-type: y proximity; */
 }
 
 body {
   height: 100vh;
-  scroll-behavior: smooth;
 }
 
-section {
-  /* scroll-snap-align: start; */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 56px;
+  border-radius: 8px;
+  border: 3.5px solid transparent;
+  background-clip: content-box;
+  background-color: var(--chakra-colors-gray-500);
 }
 
 .skill-card {

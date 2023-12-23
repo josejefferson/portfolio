@@ -1,15 +1,10 @@
-import Navbar from '#/components/navbar/navbar'
+import Page from '#/components/page/page'
 import { Sections } from '#/components/sections'
 import { Box } from '@chakra-ui/layout'
-import Head from 'next/head'
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Jefferson Dantas</title>
-      </Head>
-      <Navbar />
+    <Page>
       <Box className="sections">
         <Sections.Main />
         <Sections.About />
@@ -21,6 +16,6 @@ export default function Home() {
         <Sections.OtherProjects />
         <Sections.Contact />
       </Box>
-    </>
+    </Page>
   )
 }

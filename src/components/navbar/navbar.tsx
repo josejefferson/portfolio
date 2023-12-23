@@ -5,9 +5,11 @@ import Link from 'next/link'
 import ScrollToTop from '../common/scroll-top'
 import NavDesktop from './nav-desktop'
 import NavMobile from './nav-mobile'
-import Social from './social'
+import NavDrawer from './drawer'
+import { useProject } from '#/contexts/project'
 
-export default function Navbar({ projectName }: { projectName?: string }) {
+export default function Navbar() {
+  const project = useProject()
   const breakpointMd = useBreakpointValue({ base: false, md: true })
   const breakpointLg = useBreakpointValue({ base: false, lg: true })
 
@@ -31,16 +33,17 @@ export default function Navbar({ projectName }: { projectName?: string }) {
       >
         <Container maxW="6xl">
           <HStack spacing="10" justify="space-between">
-            <Link href="/">
-              <HStack borderWidth={1} rounded="full" p={1} position="relative">
+            <HStack>
+              <NavDrawer />
+              <HStack as={Link} href="/" borderWidth={1} rounded="full" p={1} position="relative">
                 <Avatar src="https://github.com/josejefferson.png" size="sm" />
                 <Text fontWeight={500} px={2} hidden={!breakpointLg}>
-                  {projectName || 'Jefferson Dantas'}
+                  {project?.name || 'Jefferson Dantas'}
                 </Text>
               </HStack>
-            </Link>
+            </HStack>
 
-            {!projectName && (breakpointMd ? <NavDesktop /> : <NavMobile />)}
+            {!project?.name && (breakpointMd ? <NavDesktop /> : <NavMobile />)}
           </HStack>
         </Container>
       </Box>
