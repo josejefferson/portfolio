@@ -1,8 +1,6 @@
-import { NAVIGATION } from '#/data/nav'
 import { PROJECTS } from '#/data/projects'
 import {
   Button,
-  CloseButton,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -13,10 +11,10 @@ import {
   IconButton,
   useDisclosure
 } from '@chakra-ui/react'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { IoMdMenu } from 'react-icons/io'
 import { MdArrowForward, MdHome } from 'react-icons/md'
+import Link from '../common/link'
 
 export default function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -24,7 +22,13 @@ export default function NavDrawer() {
 
   return (
     <>
-      <IconButton ref={btnRef} variant="ghost" icon={<IoMdMenu />} aria-label="Abrir menu lateral" onClick={onOpen} />
+      <IconButton
+        ref={btnRef}
+        variant="ghost"
+        icon={<IoMdMenu size={24} />}
+        aria-label="Abrir menu lateral"
+        onClick={onOpen}
+      />
 
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} finalFocusRef={btnRef}>
         <DrawerOverlay />
@@ -35,7 +39,7 @@ export default function NavDrawer() {
             <Button
               as={Link}
               href="/"
-              leftIcon={<MdHome />}
+              leftIcon={<MdHome size={24} />}
               variant="ghost"
               colorScheme="white"
               textDecoration="none !important"
@@ -62,7 +66,7 @@ export default function NavDrawer() {
                 w="full"
                 justifyContent="flex-start"
                 textDecoration="none !important"
-                leftIcon={<MdArrowForward />}
+                leftIcon={<MdArrowForward size={24} />}
                 key={i}
               >
                 {project.name}

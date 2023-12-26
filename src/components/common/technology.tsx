@@ -1,6 +1,6 @@
 import { ITechnology } from '#/data/technologies'
 import { Box, BoxProps, Image, ImageProps, Tooltip, TooltipProps } from '@chakra-ui/react'
-import Link, { LinkProps } from 'next/link'
+import Link, { LinkProps } from './link'
 
 interface ITechnologyProps {
   tech: ITechnology

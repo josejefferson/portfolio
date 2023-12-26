@@ -1,12 +1,5 @@
-import {
-  Card,
-  CardBody,
-  Container,
-  Flex,
-  Heading,
-  Text
-} from '@chakra-ui/react'
-import Link from 'next/link'
+import { Card, CardBody, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import Link from '#/components/common/link'
 import { IoLogoLinkedin } from 'react-icons/io'
 import { MdMail } from 'react-icons/md'
 import { sectionIDs } from '.'
@@ -27,6 +20,9 @@ export default function Contact() {
               borderWidth={2}
               bg="red.900"
               h="68px"
+              _hover={{ bg: 'red.800' }}
+              _active={{ bg: 'red.700' }}
+              transition=".2s ease"
             >
               <Flex h="full" aspectRatio={1 / 1} align="center" justify="center" rounded="full" bg="red.700">
                 <MdMail size={36} />
@@ -49,6 +45,9 @@ export default function Contact() {
               borderWidth={2}
               bg="linkedin.900"
               h="68px"
+              _hover={{ bg: 'linkedin.800' }}
+              _active={{ bg: 'linkedin.700' }}
+              transition=".2s ease"
             >
               <Flex h="full" aspectRatio={1 / 1} align="center" justify="center" rounded="full" bg="linkedin.700">
                 <IoLogoLinkedin size={36} />

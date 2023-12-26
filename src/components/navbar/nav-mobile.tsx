@@ -10,7 +10,7 @@ import {
   IconButton,
   useDisclosure
 } from '@chakra-ui/react'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 import { useRef } from 'react'
 import { MdMoreVert } from 'react-icons/md'
 import Social from './social'
@@ -26,7 +26,7 @@ export default function NavMobile() {
         <IconButton
           ref={btnRef}
           variant="ghost"
-          icon={<MdMoreVert />}
+          icon={<MdMoreVert size={24} />}
           aria-label="Abrir menu de navegação"
           onClick={onOpen}
         />

@@ -31,9 +31,7 @@ export function ImageDetails({ currentImage }: { currentImage: number }) {
               alignContent="start"
               gap={1}
             >
-              {image.technologies?.map((tech, i) => (
-                <Technology tech={tech} key={i} />
-              ))}
+              {image.technologies?.map((tech, i) => <Technology tech={tech} key={i} />)}
             </Flex>
           </Flex>
         </Fade>

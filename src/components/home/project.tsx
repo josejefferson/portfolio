@@ -2,7 +2,7 @@ import { Badge } from '#/components/common/badge'
 import { IProject } from '#/data/projects'
 import FormattedText from '#/components/common/formatted-text'
 import { AspectRatio, Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 import { IoLogoGithub } from 'react-icons/io'
 import { MdOpenInNew } from 'react-icons/md'
 import { A11y, Autoplay, Mousewheel, Pagination } from 'swiper/modules'
@@ -61,9 +61,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
 
       <Box>
         <Flex wrap="wrap" gap={2} mb={1} hidden={!project.badges?.length}>
-          {project.badges?.map((badge, i) => (
-            <Badge {...badge} key={i} />
-          ))}
+          {project.badges?.map((badge, i) => <Badge {...badge} key={i} />)}
         </Flex>
 
         <Heading mb={3}>{project.name}</Heading>
@@ -78,9 +76,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           Principais tecnologias utilizadas
         </Heading>
         <Flex gap={2} mb={5} flexWrap="wrap">
-          {(project.mainTechnologies || project.technologies)?.map((tech, i) => (
-            <Technology tech={tech} key={i} />
-          ))}
+          {(project.mainTechnologies || project.technologies)?.map((tech, i) => <Technology tech={tech} key={i} />)}
         </Flex>
 
         <Heading size="sm" mb={2} hidden={!project.concepts?.length}>
@@ -96,7 +92,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
 
         {project.link && (
           <Link href={project.link} target="_blank">
-            <Button mr={2} mb={2} colorScheme="green" leftIcon={<MdOpenInNew />}>
+            <Button mr={2} mb={2} colorScheme="green" leftIcon={<MdOpenInNew size={24} />}>
               Abrir
             </Button>
           </Link>
@@ -112,7 +108,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
 
         {project.github && (
           <Link href={project.github}>
-            <Button mr={2} mb={2} colorScheme="white" variant="outline" leftIcon={<IoLogoGithub />}>
+            <Button mr={2} mb={2} colorScheme="white" variant="outline" leftIcon={<IoLogoGithub size={24} />}>
               GitHub
             </Button>
           </Link>
