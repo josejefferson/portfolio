@@ -1,15 +1,16 @@
 import { Box, Button, Container, Flex, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
 import useScrollPosition from '@react-hook/window-scroll'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import Section from '../common/section'
 import { sectionIDs } from '.'
+import { FaRegFilePdf } from 'react-icons/fa6'
 
 export default function Main() {
   return (
     <Section id={sectionIDs.main} screenHeight>
       <Container maxW="6xl" h="full" display="flex" flexDirection="column">
-        <Stack direction={['column', 'row']} justify="space-between" h="full">
+        <Stack direction={['column', 'column', 'row']} justify="space-between" h="full">
           <Details />
           <Photo />
         </Stack>
@@ -67,6 +68,7 @@ function Details() {
               </Button>
             </Tooltip>
           </Link>
+
           <Link href="https://www.linkedin.com/in/jose-jefferson/" target="_blank">
             <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
               <Button
@@ -78,6 +80,21 @@ function Details() {
                 px={2}
               >
                 jose-jefferson
+              </Button>
+            </Tooltip>
+          </Link>
+
+          <Link href="/attachments/Currículo - Jefferson Dantas.pdf" target="_blank">
+            <Tooltip hasArrow label="Baixe meu currículo" placement="bottom">
+              <Button
+                aria-label="GitHub"
+                size="lg"
+                variant="outline"
+                colorScheme="red"
+                leftIcon={<FaRegFilePdf size={24} />}
+                px={2}
+              >
+                Currículo
               </Button>
             </Tooltip>
           </Link>

@@ -1,14 +1,5 @@
-import {
-  Card,
-  CardBody,
-  Container,
-  Heading,
-  Image,
-  Text,
-  Tooltip,
-  chakra
-} from '@chakra-ui/react'
-import Link from 'next/link'
+import { Card, CardBody, Container, Heading, Image, Text, Tooltip, chakra } from '@chakra-ui/react'
+import Link from '#/components/common/link'
 import { sectionIDs } from '.'
 import Section from '../common/section'
 
@@ -39,7 +30,7 @@ export default function Education() {
               2019 - 2021
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start">
+            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
               <Link href="/attachments/PPC - Informática.pdf" target="_blank">
                 <Text>Curso Técnico Integrado em Informática (ensino médio)</Text>
               </Link>
@@ -49,7 +40,7 @@ export default function Education() {
               2022 - 2023
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start">
+            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
               <Link href="/attachments/PPC - Eletrônica.pdf" target="_blank">
                 <Text>Curso Técnico Subsequente em Eletrônica</Text>
               </Link>
@@ -59,7 +50,7 @@ export default function Education() {
               2023 - 2026 <chakra.i>(em andamento)</chakra.i>
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start">
+            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
               <Link href="/attachments/PPC - TSI.pdf" target="_blank">
                 <Text>Curso Superior de Tecnologia em Sistemas para Internet</Text>
               </Link>

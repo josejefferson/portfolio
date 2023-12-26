@@ -24,11 +24,11 @@ export default function ScrollToTop() {
       size="lg"
       shadow="lg"
       zIndex={1}
-      transform={isVisible ? 'scale(1)':'scale(0)'}
+      transform={isVisible ? 'scale(1)' : 'scale(0)'}
       transition="transform .2s ease"
       onClick={scrollToTop}
     >
-      <MdArrowUpward  />
+      <MdArrowUpward size={24} />
     </IconButton>
   )
 }

@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
 import Navbar from '../navbar/navbar'
 import Head from 'next/head'
+import Footer from '../footer/footer'
 
 interface IPageProps extends PropsWithChildren {
   title?: string
@@ -20,10 +21,9 @@ export default function Page({ children, title }: IPageProps) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-
       <Navbar />
-
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { Avatar } from '@chakra-ui/avatar'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 import ScrollToTop from '../common/scroll-top'
 import NavDesktop from './nav-desktop'
 import NavMobile from './nav-mobile'

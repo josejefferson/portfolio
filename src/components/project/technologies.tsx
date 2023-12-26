@@ -2,7 +2,7 @@ import { useProject } from '#/contexts/project'
 import { ITechnology } from '#/data/technologies'
 import { ITechnologyType, TECHNOLOGY_TYPES } from '#/data/technology-types'
 import { Box, Flex, Heading, Image, Text, VStack } from '@chakra-ui/react'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 
 export function Technologies() {
   const project = useProject()

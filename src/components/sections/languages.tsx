@@ -2,7 +2,7 @@ import { IMainTechnology, MAIN_TECHNOLOGIES } from '#/data/main-technologies'
 import { Box, Card, Container, Flex, HStack, Image, Text } from '@chakra-ui/react'
 import { sectionIDs } from '.'
 import Section from '../common/section'
-import Link from 'next/link'
+import Link from '#/components/common/link'
 
 export default function Languages() {
   return (
