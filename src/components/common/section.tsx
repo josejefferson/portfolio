@@ -1,4 +1,4 @@
-import { Box, Flex, chakra } from '@chakra-ui/react'
+import { Box, Container, Flex, chakra } from '@chakra-ui/react'
 import { PropsWithChildren } from 'react'
 
 interface ISectionProps extends PropsWithChildren {
@@ -38,9 +38,11 @@ interface ISectionTitleProps {
 
 export function SectionTitle({ title, color }: ISectionTitleProps) {
   return (
-    <Box fontSize={['32px', '56px']} textAlign="center" color={color} fontFamily="monospace" py={4}>
-      <chakra.span color="gray">&lt;</chakra.span>
-      {title} <chakra.span color="gray">/&gt;</chakra.span>
-    </Box>
+    <Container maxW="6xl">
+      <Box fontSize={['32px', '56px']} textAlign="center" color={color} fontFamily="monospace" py={4}>
+        <chakra.span color="gray">&lt;</chakra.span>
+        {title} <chakra.span color="gray">/&gt;</chakra.span>
+      </Box>
+    </Container>
   )
 }

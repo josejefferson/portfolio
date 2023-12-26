@@ -13,40 +13,40 @@ export interface ITechnology {
 export const TECHNOLOGIES = {
   typescript: {
     name: 'TypeScript',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    image: '/icons/typescript.svg',
     type: TECHNOLOGY_TYPES.language,
     site: 'https://www.typescriptlang.org/'
   },
   javascript: {
     name: 'JavaScript',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    image: '/icons/javascript.svg',
     type: TECHNOLOGY_TYPES.language
   },
   html: {
     name: 'HTML',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    image: '/icons/html.svg',
     type: TECHNOLOGY_TYPES.language
   },
   css: {
     name: 'CSS',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    image: '/icons/css.svg',
     type: TECHNOLOGY_TYPES.language
   },
   sass: {
     name: 'SASS',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+    image: '/icons/sass.svg',
     type: TECHNOLOGY_TYPES.language,
     site: 'https://sass-lang.com/'
   },
   python: {
     name: 'Python',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    image: '/icons/python.svg',
     type: TECHNOLOGY_TYPES.language,
     site: 'https://www.python.org/'
   },
   react: {
     name: 'React',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    image: '/icons/react.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://react.dev/'
   },
@@ -58,19 +58,19 @@ export const TECHNOLOGIES = {
   },
   svelte: {
     name: 'Svelte',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
+    image: '/icons/svelte.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://svelte.dev/'
   },
   angular: {
     name: 'Angular',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg',
+    image: '/icons/angular.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://angular.io/'
   },
   angularjs: {
     name: 'Angular JS',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
+    image: '/icons/angularjs.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://angularjs.org/'
   },
@@ -82,7 +82,7 @@ export const TECHNOLOGIES = {
   },
   socketio: {
     name: 'Socket.IO',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
+    image: '/icons/socketio.svg',
     type: TECHNOLOGY_TYPES.library,
     site: 'https://socket.io/'
   },
@@ -94,61 +94,61 @@ export const TECHNOLOGIES = {
   },
   bootstrap: {
     name: 'Bootstrap',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    image: '/icons/bootstrap.svg',
     type: TECHNOLOGY_TYPES.library,
     site: 'https://getbootstrap.com/'
   },
   nodejs: {
     name: 'Node.js',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    image: '/icons/nodejs.svg',
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://nodejs.org/en'
   },
   vscode: {
     name: 'Visual Studio Code',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+    image: '/icons/vscode.svg',
     type: TECHNOLOGY_TYPES.application,
     site: 'https://code.visualstudio.com/'
   },
   git: {
     name: 'Git',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    image: '/icons/git.svg',
     type: TECHNOLOGY_TYPES.tool,
     site: 'https://git-scm.com/'
   },
   github: {
     name: 'GitHub',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg',
+    image: '/icons/github.svg',
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://github.com/'
   },
   mongodb: {
     name: 'MongoDB',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    image: '/icons/mongodb.svg',
     type: TECHNOLOGY_TYPES.database,
     site: 'https://www.mongodb.com/'
   },
   postgresql: {
     name: 'PostgreSQL',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+    image: '/icons/postgresql.svg',
     type: TECHNOLOGY_TYPES.database,
     site: 'https://www.postgresql.org/'
   },
   yarn: {
     name: 'Yarn',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg',
+    image: '/icons/yarn.svg',
     type: TECHNOLOGY_TYPES.tool,
     site: 'https://yarnpkg.com/'
   },
   npm: {
     name: 'NPM',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg',
+    image: '/icons/npm.svg',
     type: TECHNOLOGY_TYPES.tool,
     site: 'https://www.npmjs.com/'
   },
   figma: {
     name: 'Figma',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    image: '/icons/figma.svg',
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://www.figma.com/'
   },

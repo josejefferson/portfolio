@@ -16,12 +16,11 @@ import {
 import { InView } from 'react-intersection-observer'
 import { sectionIDs } from '.'
 import Section from '../common/section'
-import { Technology } from '../common/technology'
 
 export default function Skills() {
   return (
     <Section id={sectionIDs.skills} title="Habilidades" titleColor="orange.500">
-      <Container maxW="6xl">
+      <Container maxW="6xl" my={5}>
         <SimpleGrid columns={[1, 1, 3]} spacing={5} py={5} h="full">
           {SKILLS.map((skillCategory, i) => (
             <SkillCard skillCategory={skillCategory} key={i} />

@@ -49,8 +49,8 @@ function Details() {
           </Heading>
           <Box bg="primary.500" h={1.5} rounded="full" />
         </Box>
-        <Heading fontSize={['xl', '2xl', '3xl', '4xl']} mt={[2, 6]}>
-          Desenvolvedor web
+        <Heading fontSize={['xl', '2xl', '3xl', '4xl']} mt={[2, 6]} fontWeight={200}>
+          Desenvolvedor web full-stack
         </Heading>
         <Stack mt={[4, 10]} direction={['column', 'row']}>
           <Link href="https://github.com/josejefferson" target="_blank">

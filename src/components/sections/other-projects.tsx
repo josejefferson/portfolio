@@ -4,7 +4,7 @@ import Section from '../common/section'
 
 export default function OtherProjects() {
   return (
-    <Section id={sectionIDs.otherProjects} title="Outros projetos" titleColor="orange.500">
+    <Section id={sectionIDs.otherProjects} title="Outros projetos" titleColor="pink.500">
       <Container maxW="6xl" my={5}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora voluptas labore dolor dolorem placeat
         libero soluta. Quas dolorem harum perferendis fugit id explicabo asperiores recusandae ea placeat porro!

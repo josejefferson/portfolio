@@ -14,7 +14,7 @@ import Section from '../common/section'
 
 export default function Education() {
   return (
-    <Section id={sectionIDs.education} title="Formação" titleColor="orange.500">
+    <Section id={sectionIDs.education} title="Formação" titleColor="purple.500">
       <Container maxW="6xl" my={5}>
         <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden" p={5}>
           <Image
