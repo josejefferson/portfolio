@@ -1,3 +1,4 @@
+import { ForceTheme } from '#/components/common/force-theme'
 import PageTransition from '#/components/page/transition'
 import '#/styles/globals.css'
 import { theme } from '#/utils/theme'
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <PageTransition>
       <ChakraProvider theme={theme}>
+        <ForceTheme />
         <Component {...pageProps} />
       </ChakraProvider>
     </PageTransition>
