@@ -7,9 +7,9 @@ export default function NavDesktop() {
   return (
     <ButtonGroup as="nav" variant="link" spacing="8" alignItems="center">
       {NAVIGATION.map((item, i) => (
-        <Link href={item.href} key={i}>
-          <Button colorScheme="primary">{item.name}</Button>
-        </Link>
+        <Button as={Link} href={item.href} key={i} colorScheme="primary">
+          {item.name}
+        </Button>
       ))}
       <Social />
     </ButtonGroup>

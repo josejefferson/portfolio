@@ -91,27 +91,37 @@ export function Project({ project, i }: { project: IProject; i: number }) {
         </Flex>
 
         {project.link && (
-          <Link href={project.link} target="_blank">
-            <Button mr={2} mb={2} colorScheme="green" leftIcon={<MdOpenInNew size={24} />}>
-              Abrir
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href={project.link}
+            target="_blank"
+            mr={2}
+            mb={2}
+            colorScheme="green"
+            leftIcon={<MdOpenInNew size={24} />}
+          >
+            Abrir
+          </Button>
         )}
 
         {project.id && (
-          <Link href={`/projeto/${project.id}`}>
-            <Button mr={2} mb={2} colorScheme="blue" variant="outline">
-              Detalhes
-            </Button>
-          </Link>
+          <Button as={Link} href={`/projeto/${project.id}`} mr={2} mb={2} colorScheme="blue" variant="outline">
+            Detalhes
+          </Button>
         )}
 
         {project.github && (
-          <Link href={project.github}>
-            <Button mr={2} mb={2} colorScheme="white" variant="outline" leftIcon={<IoLogoGithub size={24} />}>
-              GitHub
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href={project.github}
+            mr={2}
+            mb={2}
+            colorScheme="white"
+            variant="outline"
+            leftIcon={<IoLogoGithub size={24} />}
+          >
+            GitHub
+          </Button>
         )}
       </Box>
     </Flex>

@@ -1,4 +1,4 @@
-import { Link } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 import { useState } from 'react'
 
 export function TruncateText({ children, limit }: { children: string; limit?: number }) {
@@ -12,22 +12,15 @@ export function TruncateText({ children, limit }: { children: string; limit?: nu
   }
 
   if (children.length < LIMIT + 50) {
-    return <>{children}</>
+    return children
   }
 
   return (
     <>
       {readMore ? children : children.slice(0, LIMIT) + '…'}{' '}
-      <Link onClick={toggleReadMore}>
-        {!readMore ? (
-          'Ler mais'
-        ) : (
-          <>
-            <br />
-            Ler menos
-          </>
-        )}
-      </Link>
+      <Button variant="link" onClick={toggleReadMore} display={readMore ? 'block' : 'inline'}>
+        {readMore ? 'Ler menos' : 'Ler mais'}
+      </Button>
     </>
   )
 }

@@ -54,50 +54,53 @@ function Details() {
           Desenvolvedor web full-stack
         </Heading>
         <Stack mt={[4, 10]} direction={['column', 'row']}>
-          <Link href="https://github.com/josejefferson" target="_blank">
-            <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
-              <Button
-                aria-label="GitHub"
-                size="lg"
-                variant="outline"
-                color="white"
-                leftIcon={<IoLogoGithub size={36} />}
-                px={2}
-              >
-                josejefferson
-              </Button>
-            </Tooltip>
-          </Link>
+          <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
+            <Button
+              as={Link}
+              href="https://github.com/josejefferson"
+              target="_blank"
+              aria-label="GitHub"
+              size="lg"
+              variant="outline"
+              color="white"
+              leftIcon={<IoLogoGithub size={36} />}
+              px={2}
+            >
+              josejefferson
+            </Button>
+          </Tooltip>
 
-          <Link href="https://www.linkedin.com/in/jose-jefferson/" target="_blank">
-            <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
-              <Button
-                aria-label="LinkedIn"
-                size="lg"
-                variant="outline"
-                colorScheme="linkedin"
-                leftIcon={<IoLogoLinkedin size={36} />}
-                px={2}
-              >
-                jose-jefferson
-              </Button>
-            </Tooltip>
-          </Link>
+          <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
+            <Button
+              as={Link}
+              href="https://www.linkedin.com/in/jose-jefferson/"
+              target="_blank"
+              aria-label="LinkedIn"
+              size="lg"
+              variant="outline"
+              colorScheme="linkedin"
+              leftIcon={<IoLogoLinkedin size={36} />}
+              px={2}
+            >
+              jose-jefferson
+            </Button>
+          </Tooltip>
 
-          <Link href="/attachments/Currículo - Jefferson Dantas.pdf" target="_blank">
-            <Tooltip hasArrow label="Baixe meu currículo" placement="bottom">
-              <Button
-                aria-label="GitHub"
-                size="lg"
-                variant="outline"
-                colorScheme="red"
-                leftIcon={<FaRegFilePdf size={24} />}
-                px={2}
-              >
-                Currículo
-              </Button>
-            </Tooltip>
-          </Link>
+          <Tooltip hasArrow label="Baixe meu currículo" placement="bottom">
+            <Button
+              as={Link}
+              href="/attachments/Currículo - Jefferson Dantas.pdf"
+              target="_blank"
+              aria-label="GitHub"
+              size="lg"
+              variant="outline"
+              colorScheme="red"
+              leftIcon={<FaRegFilePdf size={24} />}
+              px={2}
+            >
+              Currículo
+            </Button>
+          </Tooltip>
         </Stack>
       </Box>
     </Flex>
@@ -117,25 +120,26 @@ function Photo() {
           transition="all 0.2s ease-in-out"
           _hover={{ shadow: 'lg' }}
         />
-        <Link href="https://github.com/josejefferson" target="_blank">
-          <Tooltip hasArrow label="Acesse meu GitHub" placement="left">
-            <IconButton
-              aria-label="GitHub"
-              position="absolute"
-              bottom="0"
-              right="0"
-              w={[50, 75, 100]}
-              h={[50, 75, 100]}
-              variant="ghost"
-              bg="white"
-              rounded="full"
-              shadow="md"
-              _hover={{ bg: 'white', transform: 'scale(1.1)', shadow: 'xl' }}
-            >
-              <IoLogoGithub size={100} color="black" />
-            </IconButton>
-          </Tooltip>
-        </Link>
+        <Tooltip hasArrow label="Acesse meu GitHub" placement="left">
+          <IconButton
+            as={Link}
+            href="https://github.com/josejefferson"
+            target="_blank"
+            aria-label="GitHub"
+            position="absolute"
+            bottom="0"
+            right="0"
+            w={[50, 75, 100]}
+            h={[50, 75, 100]}
+            variant="ghost"
+            bg="white"
+            rounded="full"
+            shadow="md"
+            _hover={{ bg: 'white', transform: 'scale(1.1)', shadow: 'xl' }}
+          >
+            <IoLogoGithub size={100} color="black" />
+          </IconButton>
+        </Tooltip>
       </Box>
     </Flex>
   )

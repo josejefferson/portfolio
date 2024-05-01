@@ -1,8 +1,8 @@
+import Link from '#/components/common/link'
 import { IMainTechnology, MAIN_TECHNOLOGIES } from '#/data/main-technologies'
-import { Box, Card, Container, Flex, HStack, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Card, Container, Flex, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
-import Link from '#/components/common/link'
 
 export default function MainTechnologies() {
   return (
