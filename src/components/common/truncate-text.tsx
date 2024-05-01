@@ -4,7 +4,7 @@ import { useState } from 'react'
 export function TruncateText({ children, limit }: { children: string; limit?: number }) {
   const [readMore, setReadMore] = useState(false)
 
-  const LIMIT = limit ?? 300
+  const LIMIT = limit ?? 200
 
   const toggleReadMore = (e: any) => {
     e.preventDefault()

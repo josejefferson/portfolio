@@ -95,7 +95,7 @@ function Details() {
               size="lg"
               variant="outline"
               colorScheme="red"
-              leftIcon={<FaRegFilePdf size={24} />}
+              leftIcon={<FaRegFilePdf size={28} />}
               px={2}
             >
               Currículo

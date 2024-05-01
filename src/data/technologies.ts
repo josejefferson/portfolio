@@ -8,8 +8,6 @@ export interface ITechnology {
   site?: string
 }
 
-// React Admin
-
 export const TECHNOLOGIES = {
   typescript: {
     name: 'TypeScript',
@@ -158,12 +156,19 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://www.figma.com/'
   },
+  dialogflow: {
+    name: 'Dialogflow',
+    image: '/icons/dialogflow.svg',
+    type: TECHNOLOGY_TYPES.platform,
+    site: 'https://dialogflow.cloud.google.com/'
+  },
 
   // Bibliotecas
   axios: {
     name: 'Axios',
     image: '/icons/axios.svg',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://axios-http.com/'
   },
   bcrypt: {
     name: 'Bcrypt',
@@ -173,57 +178,92 @@ export const TECHNOLOGIES = {
   chakraUI: {
     name: 'Chakra UI',
     image: '/icons/chakra-ui.svg',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://chakra-ui.com/'
   },
   dayJS: {
     name: 'Day.js',
     image: '/icons/day-js.png',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://day.js.org/'
+  },
+  ejs: {
+    name: 'EJS',
+    image: '/icons/ejs.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://ejs.co/'
   },
   eslint: {
     name: 'ESLint',
     image: '/icons/eslint.svg',
-    type: TECHNOLOGY_TYPES.tool
+    type: TECHNOLOGY_TYPES.tool,
+    site: 'https://eslint.org/'
   },
   formik: {
     name: 'Formik',
     image: '/icons/formik.png',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://formik.org/'
   },
   jotai: {
     name: 'Jotai',
     image: '/icons/jotai.png',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://jotai.org/'
   },
   jwt: {
     name: 'JSON Web Tokens',
     image: '/icons/jwt.png',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://jwt.io/'
+  },
+  materialUI: {
+    name: 'Material UI',
+    image: '/icons/material-ui.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://mui.com/'
   },
   nodemailer: {
     name: 'Nodemailer',
     image: '/icons/nodemailer.png',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://www.nodemailer.com/'
   },
   prettier: {
     name: 'Prettier',
     image: '/icons/prettier.png',
-    type: TECHNOLOGY_TYPES.tool
+    type: TECHNOLOGY_TYPES.tool,
+    site: 'https://prettier.io/'
+  },
+  reactAdmin: {
+    name: 'React Admin',
+    image: '/icons/react-admin.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://marmelab.com/react-admin/'
   },
   reactEmail: {
     name: 'React Email',
     image: '/icons/react-email.svg',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://react.email/'
+  },
+  reactHookForm: {
+    name: 'React Hook Form',
+    image: '/icons/react-hook-form.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://react-hook-form.com/'
   },
   reactIcons: {
     name: 'React Icons',
     image: '/icons/react-icons.svg',
-    type: TECHNOLOGY_TYPES.library
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://react-icons.github.io/react-icons/'
   },
 
   docker: {
     name: 'Docker',
     image: '/icons/docker.png',
-    type: TECHNOLOGY_TYPES.platform
+    type: TECHNOLOGY_TYPES.platform,
+    site: 'https://www.docker.com/'
   }
 } satisfies Record<string, ITechnology>

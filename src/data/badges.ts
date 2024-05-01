@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons'
-import { MdCode, MdHourglassTop, MdLock } from 'react-icons/md'
+import { MdCheck, MdClose, MdCode, MdHourglassTop, MdLock, MdWarning } from 'react-icons/md'
 
 export interface IBadge {
   color: string
@@ -15,10 +15,16 @@ export const BADGES = {
     color: 'orange',
     tip: 'O projeto ainda não foi finalizado'
   },
-  opensource: {
+  production: {
+    text: 'Em produção',
+    icon: MdCheck,
+    color: 'green',
+    tip: 'O projeto já está sendo utilizado'
+  },
+  openSource: {
     text: 'Open source',
     icon: MdCode,
-    color: 'green',
+    color: 'blue',
     tip: 'O código fonte do projeto está disponível publicamente'
   },
   private: {

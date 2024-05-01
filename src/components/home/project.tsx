@@ -60,7 +60,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
       </Box>
 
       <Box>
-        <Flex wrap="wrap" gap={2} mb={1} hidden={!project.badges?.length}>
+        <Flex wrap="wrap" gap={4} mb={1} hidden={!project.badges?.length}>
           {project.badges?.map((badge, i) => <Badge {...badge} key={i} />)}
         </Flex>
 
