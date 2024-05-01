@@ -3,12 +3,12 @@ import useScrollPosition from '@react-hook/window-scroll'
 import Link from '#/components/common/link'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import Section from '../common/section'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import { FaRegFilePdf } from 'react-icons/fa6'
 
 export default function Main() {
   return (
-    <Section id={sectionIDs.main} screenHeight>
+    <Section id={SECTION_IDS.main} screenHeight>
       <Container maxW="6xl" h="full" display="flex" flexDirection="column">
         <Stack direction={['column', 'column', 'row']} justify="space-between" h="full">
           <Details />

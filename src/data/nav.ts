@@ -1,4 +1,4 @@
-import { sectionIDs } from '#/components/sections'
+import { SECTION_IDS } from '#/components/sections'
 
 export interface INavigation {
   name: string
@@ -8,26 +8,26 @@ export interface INavigation {
 export const NAVIGATION: INavigation[] = [
   {
     name: 'Sobre mim',
-    href: `#${sectionIDs.about}`
+    href: `#${SECTION_IDS.about}`
   },
   {
     name: 'Linguagens',
-    href: `#${sectionIDs.languages}`
+    href: `#${SECTION_IDS.languages}`
   },
   {
     name: 'Habilidades',
-    href: `#${sectionIDs.skills}`
+    href: `#${SECTION_IDS.skills}`
   },
   {
     name: 'Formação',
-    href: `#${sectionIDs.education}`
+    href: `#${SECTION_IDS.education}`
   },
   {
     name: 'Projetos',
-    href: `#${sectionIDs.mainProjects}`
+    href: `#${SECTION_IDS.mainProjects}`
   },
   {
     name: 'Contato',
-    href: `#${sectionIDs.contact}`
+    href: `#${SECTION_IDS.contact}`
   }
 ]

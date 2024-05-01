@@ -1,10 +1,10 @@
 import { Card, CardBody, Container, Flex, Grid, Image, Link, chakra } from '@chakra-ui/react'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
 export default function About() {
   return (
-    <Section id={sectionIDs.about} title="Sobre mim" titleColor="blue.500">
+    <Section id={SECTION_IDS.about} title="Sobre mim" titleColor="blue.500">
       <Container maxW="6xl" my={5}>
         <Grid templateColumns={{ base: '1fr', md: '3fr 1fr', lg: '2fr 1fr' }} gap={10}>
           <Card rounded="xl">

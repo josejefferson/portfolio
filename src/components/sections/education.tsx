@@ -1,11 +1,11 @@
 import { Card, CardBody, Container, Heading, Image, Text, Tooltip, chakra } from '@chakra-ui/react'
 import Link from '#/components/common/link'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
 export default function Education() {
   return (
-    <Section id={sectionIDs.education} title="Formação" titleColor="purple.500">
+    <Section id={SECTION_IDS.education} title="Formação" titleColor="purple.500">
       <Container maxW="6xl" my={5}>
         <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden" p={5}>
           <Image

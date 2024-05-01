@@ -14,7 +14,6 @@ export default function FormattedText({ children, ...props }: React.ComponentPro
       }}
       {...props}
     >
-      {/* @ts-expect-error ... */}
       <ReactLinkify>{children as any}</ReactLinkify>
     </Text>
   )

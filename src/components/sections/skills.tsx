@@ -14,12 +14,12 @@ import {
   Text
 } from '@chakra-ui/react'
 import { InView } from 'react-intersection-observer'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
 export default function Skills() {
   return (
-    <Section id={sectionIDs.skills} title="Habilidades" titleColor="orange.500">
+    <Section id={SECTION_IDS.skills} title="Habilidades" titleColor="orange.500">
       <Container maxW="6xl" my={5}>
         <SimpleGrid columns={[1, 1, 3]} spacing={5} py={5} h="full">
           {SKILLS.map((skillCategory, i) => (

@@ -10,5 +10,6 @@ export const MAIN_TECHNOLOGIES: IMainTechnology[] = [
   { technology: TECHNOLOGIES.javascript, cardColor: 'yellow' },
   { technology: TECHNOLOGIES.nextjs, cardColor: 'purple' },
   { technology: TECHNOLOGIES.react, cardColor: 'blue' },
+  { technology: TECHNOLOGIES.nestjs, cardColor: 'pink' },
   { technology: TECHNOLOGIES.nodejs, cardColor: 'green' }
 ]

@@ -2,12 +2,12 @@ import { Card, CardBody, Container, Flex, Heading, Text } from '@chakra-ui/react
 import Link from '#/components/common/link'
 import { IoLogoLinkedin } from 'react-icons/io'
 import { MdMail } from 'react-icons/md'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
 export default function Contact() {
   return (
-    <Section id={sectionIDs.contact} title="Contato" titleColor="cyan.500">
+    <Section id={SECTION_IDS.contact} title="Contato" titleColor="cyan.500">
       <Container maxW="6xl" my={5}>
         <Flex justify="space-evenly" direction={{ base: 'column', md: 'row' }} gap={5}>
           <Link href="mailto:jeffersonn.jjdaj@gmail.com" target="_blank">

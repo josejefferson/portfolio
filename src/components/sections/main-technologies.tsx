@@ -1,20 +1,20 @@
 import { IMainTechnology, MAIN_TECHNOLOGIES } from '#/data/main-technologies'
-import { Box, Card, Container, Flex, HStack, Image, Text } from '@chakra-ui/react'
-import { sectionIDs } from '.'
+import { Box, Card, Container, Flex, HStack, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 import Link from '#/components/common/link'
 
-export default function Languages() {
+export default function MainTechnologies() {
   return (
-    <Section id={sectionIDs.languages} title="Principais tecnologias" titleColor="yellow.500">
+    <Section id={SECTION_IDS.languages} title="Principais tecnologias" titleColor="yellow.500">
       <Container maxW="6xl" my={5}>
         <Flex justify="center" overflowX="auto">
           <Box display="inline-block" mx="auto">
-            <HStack spacing={[3, 5]} m={[3, 5]}>
+            <SimpleGrid columns={{ base: 3, md: 4, lg: 6 }} spacing={[3, 5]} m={[3, 5]}>
               {MAIN_TECHNOLOGIES.map((tech, i) => (
                 <TechnologyCard tech={tech} key={i} />
               ))}
-            </HStack>
+            </SimpleGrid>
           </Box>
         </Flex>
       </Container>
@@ -34,7 +34,6 @@ export function TechnologyCard({ tech }: { tech: IMainTechnology }) {
         e.preventDefault()
         e.stopPropagation()
       }}
-      style={{ flexShrink: 0 }}
     >
       <Card
         p={[2, 4]}
@@ -44,7 +43,7 @@ export function TechnologyCard({ tech }: { tech: IMainTechnology }) {
         _active={{ bg: `${cardColor}.700` }}
         transition=".2s ease"
       >
-        <Image src={technology.image} alt={technology.name} w={[100, 150]} h={[100, 150]} objectFit="contain" />
+        <Image src={technology.image} alt={technology.name} w="full" aspectRatio={1 / 1} objectFit="contain" />
         <Text fontSize={['md', 'xl']} mt={[2, 4]}>
           {technology.name}
         </Text>

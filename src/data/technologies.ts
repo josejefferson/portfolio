@@ -56,6 +56,12 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://nextjs.org/'
   },
+  nestjs: {
+    name: 'NestJS',
+    image: '/icons/nestjs.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://nestjs.com/'
+  },
   svelte: {
     name: 'Svelte',
     image: '/icons/svelte.svg',

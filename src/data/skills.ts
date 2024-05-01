@@ -30,6 +30,7 @@ export const SKILLS: ISkillCategory[] = [
     items: [
       { technology: TECHNOLOGIES.react, skill: 90 },
       { technology: TECHNOLOGIES.nextjs, skill: 95 },
+      { technology: TECHNOLOGIES.nestjs, skill: 80 },
       { technology: TECHNOLOGIES.svelte, skill: 65 },
       { technology: TECHNOLOGIES.angular, skill: 50 },
       { technology: TECHNOLOGIES.angularjs, skill: 40 },

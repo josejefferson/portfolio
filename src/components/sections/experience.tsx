@@ -1,11 +1,11 @@
 import { Container, Heading, UnorderedList, ListItem, Text, Box, Flex, Tooltip } from '@chakra-ui/react'
-import { sectionIDs } from '.'
+import { SECTION_IDS } from '.'
 import Section from '../common/section'
 import { COMPETENCES } from '#/data/competences'
 
 export default function Experience() {
   return (
-    <Section id={sectionIDs.experience} title="Experiência" titleColor="green.500">
+    <Section id={SECTION_IDS.experience} title="Experiência" titleColor="green.500">
       <Container maxW="6xl" my={5}>
         <Heading>IFPB - Campus Picuí</Heading>
 
