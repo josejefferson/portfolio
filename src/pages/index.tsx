@@ -13,7 +13,7 @@ export default function Home() {
         <Sections.Education />
         <Sections.Experience />
         <Sections.MainProjects />
-        <Sections.OtherProjects />
+        {/* <Sections.OtherProjects /> */}
         <Sections.Contact />
       </Box>
     </Page>

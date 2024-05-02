@@ -16,7 +16,6 @@ export function Project({ project, i }: { project: IProject; i: number }) {
   return (
     <Flex
       direction={isOdd ? ['column', 'column', 'row'] : ['column', 'column', 'row-reverse']}
-      mb={20}
       gap={6}
       sx={{
         '&:hover > .side-line': { h: [0, 0, '200px'], w: ['200px', '200px', 0] },
@@ -82,7 +81,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
         <Heading size="sm" mb={2} hidden={!project.concepts?.length}>
           Conceitos utilizados
         </Heading>
-        <Flex gap={1} mb={5} flexWrap="wrap">
+        <Flex gap={1} mb={5} flexWrap="wrap" hidden={!project.concepts?.length}>
           {project.concepts?.map((concept, i) => (
             <Box bg="gray.600" fontSize="xs" borderRadius="full" py={0.5} px={2} key={i}>
               {concept.name}
