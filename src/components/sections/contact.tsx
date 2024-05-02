@@ -5,6 +5,7 @@ import { MdMail } from 'react-icons/md'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
+// TODO: colocar contatos em um arquivo separado
 export default function Contact() {
   return (
     <Section id={SECTION_IDS.contact} title="Contato" titleColor="cyan.500">

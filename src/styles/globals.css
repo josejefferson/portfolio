@@ -1,3 +1,5 @@
+/* TODO: separar arquivos css */
+
 * {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth !important;
@@ -175,4 +177,21 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--chakra-colors-gray-500) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: var(--swiper-navigation-size) !important;
+  background: var(--chakra-colors-blackAlpha-400) !important;
+  border-radius: 1000px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--chakra-colors-white) !important;
+  font-size: 1.5rem !important;
 }

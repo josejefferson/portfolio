@@ -14,6 +14,7 @@ export function ImageDetails({ currentImage }: { currentImage: number }) {
             left={0}
             top={0}
             p={3}
+            gap={8}
             w="full"
             h="full"
             pointerEvents={currentImage !== i ? 'none' : 'auto'}

@@ -249,7 +249,7 @@ export const TECHNOLOGIES = {
   },
   reactHookForm: {
     name: 'React Hook Form',
-    image: '/icons/react-hook-form.svg',
+    image: '/icons/react-hook-form.png',
     type: TECHNOLOGY_TYPES.library,
     site: 'https://react-hook-form.com/'
   },

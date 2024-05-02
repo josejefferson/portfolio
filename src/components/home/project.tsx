@@ -45,7 +45,11 @@ export function Project({ project, i }: { project: IProject; i: number }) {
             delay: 10000 + Math.floor(Math.random() * 5000),
             disableOnInteraction: false
           }}
-          style={{ borderRadius: 'var(--chakra-radii-lg)', transition: '.2s ease' }}
+          style={{
+            borderRadius: 'var(--chakra-radii-lg)',
+            transition: '.2s ease',
+            boxShadow: 'var(--chakra-shadows-dark-lg)'
+          }}
           className="images"
         >
           {project.images.map((image, i) => (

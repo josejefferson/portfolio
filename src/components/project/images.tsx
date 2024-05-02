@@ -1,5 +1,5 @@
 import { useProject } from '#/contexts/project'
-import { Box, Image } from '@chakra-ui/react'
+import { AspectRatio, Box, Image } from '@chakra-ui/react'
 import { A11y, Mousewheel, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -19,7 +19,9 @@ export function Images({ setCurrentImage }: { setCurrentImage: (i: number) => vo
       >
         {project.detailImages?.map((image, i) => (
           <SwiperSlide key={i}>
-            <Image src={image.src} alt={image.title} />
+            <AspectRatio ratio={16 / 9} w="full" bg="black">
+              <Image src={image.src} alt={image.title} h="full" sx={{ objectFit: 'scale-down !important' }} />
+            </AspectRatio>
           </SwiperSlide>
         ))}
       </Swiper>
