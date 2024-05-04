@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <Box as="footer" bg="gray.900" py={5} pb={20}>
       <Container maxW="6xl">
-        <HStack justify="space-between" flexDirection={['column', 'row']}>
+        <HStack justify="space-between" flexDirection={{ base: 'column', sm: 'row' }}>
           <Text fontSize="sm" color="fg.subtle">
             &copy; {new Date().getFullYear()} Jefferson Dantas
           </Text>

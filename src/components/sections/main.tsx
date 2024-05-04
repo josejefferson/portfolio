@@ -1,18 +1,18 @@
-import { Box, Button, Container, Flex, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
-import useScrollPosition from '@react-hook/window-scroll'
 import Link from '#/components/common/link'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
-import Section from '../common/section'
-import { SECTION_IDS } from '.'
+import { Box, BoxProps, Button, Container, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
+import useScrollPosition from '@react-hook/window-scroll'
 import { FaRegFilePdf } from 'react-icons/fa6'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
+import { SECTION_IDS } from '.'
+import Section from '../common/section'
 
 export default function Main() {
   return (
     <Section id={SECTION_IDS.main} screenHeight>
       <Container maxW="6xl" h="full" display="flex" flexDirection="column">
-        <Stack direction={['column', 'column', 'row']} justify="space-between" h="full">
+        <Stack direction={{ base: 'column', md: 'row' }} justify="space-between" h="full" py={{ base: 4, md: 0 }}>
           <Details />
-          <Photo />
+          <Photo display={{ base: 'none', md: 'block' }} mr={0} />
         </Stack>
         <ScrollToSeeMore />
       </Container>
@@ -22,7 +22,6 @@ export default function Main() {
 
 function ScrollToSeeMore() {
   const scrollY = useScrollPosition(10)
-
   const isVisible = scrollY <= 0
 
   return (
@@ -41,106 +40,109 @@ function ScrollToSeeMore() {
 
 function Details() {
   return (
-    <Flex direction="column" justify="center" w="fit-content">
-      <Box mt={[4, 0]}>
-        <Heading fontSize={['2xl', '3xl', '4xl', '5xl']}>Olá! Eu sou</Heading>
-        <Box w="fit-content">
-          <Heading fontSize={['3xl', '4xl', '5xl', '6xl']} color="primary.500" my={2}>
-            Jefferson Dantas
-          </Heading>
-          <Box bg="primary.500" h={1.5} rounded="full" />
-        </Box>
-        <Heading fontSize={['xl', '2xl', '3xl', '4xl']} mt={[2, 6]} fontWeight={200}>
-          Desenvolvedor web full-stack
+    <Box my="auto" textAlign={{ base: 'center', md: 'left' }} fontSize={{ base: '0.65rem', sm: '0.75rem', md: '1rem' }}>
+      <Heading fontSize="e4xl" mb={4}>
+        Olá! Eu sou
+      </Heading>
+
+      <Photo display={{ base: 'block', md: 'none' }} mb={4} />
+
+      <Box w="fit-content" mx={{ base: 'auto', md: 0 }} mb={4}>
+        <Heading fontSize="e6xl" color="primary.500" mb={2}>
+          Jefferson Dantas
         </Heading>
-        <Stack mt={[4, 10]} direction={['column', 'row']}>
-          <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
-            <Button
-              as={Link}
-              href="https://github.com/josejefferson"
-              target="_blank"
-              aria-label="GitHub"
-              size="lg"
-              variant="outline"
-              color="white"
-              leftIcon={<IoLogoGithub size={36} />}
-              px={2}
-            >
-              josejefferson
-            </Button>
-          </Tooltip>
-
-          <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
-            <Button
-              as={Link}
-              href="https://www.linkedin.com/in/jose-jefferson/"
-              target="_blank"
-              aria-label="LinkedIn"
-              size="lg"
-              variant="outline"
-              colorScheme="linkedin"
-              leftIcon={<IoLogoLinkedin size={36} />}
-              px={2}
-            >
-              jose-jefferson
-            </Button>
-          </Tooltip>
-
-          <Tooltip hasArrow label="Baixe meu currículo" placement="bottom">
-            <Button
-              as={Link}
-              href="/attachments/Currículo - Jefferson Dantas.pdf"
-              target="_blank"
-              aria-label="GitHub"
-              size="lg"
-              variant="outline"
-              colorScheme="red"
-              leftIcon={<FaRegFilePdf size={28} />}
-              px={2}
-            >
-              Currículo
-            </Button>
-          </Tooltip>
-        </Stack>
+        <Box bg="primary.500" h={1.5} rounded="full" />
       </Box>
-    </Flex>
-  )
-}
 
-function Photo() {
-  return (
-    <Flex direction="column" align="center" justify="center" h="full">
-      <Box position="relative" w="fit-content">
-        <Image
-          src="https://github.com/josejefferson.png"
-          aria-label="Imagem do GitHub de Jefferson Dantas"
-          rounded="full"
-          w={['200px', '300px', '350px', '500px']}
-          shadow="md"
-          transition="all 0.2s ease-in-out"
-          _hover={{ shadow: 'lg' }}
-        />
-        <Tooltip hasArrow label="Acesse meu GitHub" placement="left">
-          <IconButton
+      <Heading fontSize="e4xl" fontWeight={200} mb={4}>
+        Desenvolvedor web full-stack
+      </Heading>
+
+      <Stack mt={10} direction={{ base: 'column', md: 'row' }} maxW={{ base: 'xs', md: 'unset' }} mx="auto">
+        <Tooltip label="Acesse meu GitHub" placement="bottom">
+          <Button
             as={Link}
             href="https://github.com/josejefferson"
             target="_blank"
             aria-label="GitHub"
-            position="absolute"
-            bottom="0"
-            right="0"
-            w={[50, 75, 100]}
-            h={[50, 75, 100]}
-            variant="ghost"
-            bg="white"
-            rounded="full"
-            shadow="md"
-            _hover={{ bg: 'white', transform: 'scale(1.1)', shadow: 'xl' }}
+            size="lg"
+            variant="outline"
+            color="white"
+            leftIcon={<IoLogoGithub size={36} />}
+            px={2}
           >
-            <IoLogoGithub size={100} color="black" />
-          </IconButton>
+            josejefferson
+          </Button>
         </Tooltip>
-      </Box>
-    </Flex>
+
+        <Tooltip label="Acesse meu LinkedIn" placement="bottom">
+          <Button
+            as={Link}
+            href="https://www.linkedin.com/in/jose-jefferson/"
+            target="_blank"
+            aria-label="LinkedIn"
+            size="lg"
+            variant="outline"
+            colorScheme="linkedin"
+            leftIcon={<IoLogoLinkedin size={36} />}
+            px={2}
+          >
+            jose-jefferson
+          </Button>
+        </Tooltip>
+
+        <Tooltip label="Baixe meu currículo" placement="bottom">
+          <Button
+            as={Link}
+            href="/attachments/Currículo - Jefferson Dantas.pdf"
+            target="_blank"
+            aria-label="GitHub"
+            size="lg"
+            variant="outline"
+            colorScheme="red"
+            leftIcon={<FaRegFilePdf size={28} />}
+            px={2}
+          >
+            Currículo
+          </Button>
+        </Tooltip>
+      </Stack>
+    </Box>
+  )
+}
+
+function Photo(props: BoxProps) {
+  return (
+    <Box position="relative" w="fit-content" m="auto" {...props}>
+      <Image
+        src="https://github.com/josejefferson.png"
+        aria-label="Imagem do GitHub de Jefferson Dantas"
+        rounded="full"
+        w={{ base: '20em', lg: '30em' }}
+        shadow="md"
+        transition="all 0.2s ease-in-out"
+        _hover={{ shadow: 'lg' }}
+      />
+      <Tooltip label="Acesse meu GitHub" placement="left">
+        <IconButton
+          as={Link}
+          href="https://github.com/josejefferson"
+          target="_blank"
+          aria-label="GitHub"
+          position="absolute"
+          bottom="0"
+          right="0"
+          w={{ base: '4em', md: '6em' }}
+          h={{ base: '4em', md: '6em' }}
+          variant="ghost"
+          bg="white"
+          rounded="full"
+          shadow="md"
+          _hover={{ bg: 'white', transform: 'scale(1.1)', shadow: 'xl' }}
+        >
+          <IoLogoGithub size={100} color="black" />
+        </IconButton>
+      </Tooltip>
+    </Box>
   )
 }

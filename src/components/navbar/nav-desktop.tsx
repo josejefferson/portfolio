@@ -5,7 +5,7 @@ import Social from './social'
 
 export default function NavDesktop() {
   return (
-    <ButtonGroup as="nav" variant="link" spacing="8" alignItems="center">
+    <ButtonGroup as="nav" variant="link" spacing={{ base: 4, lg: 8 }} alignItems="center">
       {NAVIGATION.map((item, i) => (
         <Button as={Link} href={item.href} key={i} colorScheme="primary">
           {item.name}

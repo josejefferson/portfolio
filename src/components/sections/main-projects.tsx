@@ -7,7 +7,7 @@ import { Project } from '../home/project'
 export default function MainProjects() {
   return (
     <Section id={SECTION_IDS.mainProjects} title="Projetos em destaque" titleColor="red.500">
-      <Container as={Flex} direction="column" gap={20} maxW="6xl" my={5}>
+      <Container as={Flex} direction="column" gap={20} maxW="6xl">
         {PROJECTS.map((project, i) => (
           <Project project={project} i={i} key={i} />
         ))}

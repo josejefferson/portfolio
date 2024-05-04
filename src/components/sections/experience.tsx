@@ -7,7 +7,7 @@ import Link from '../common/link'
 export default function Experience() {
   return (
     <Section id={SECTION_IDS.experience} title="Experiência" titleColor="green.500">
-      <Container maxW="6xl" my={5}>
+      <Container maxW="6xl">
         <Heading>IFPB - Campus Picuí</Heading>
 
         <Text fontWeight={200} fontStyle="italic" mb={4}>
@@ -54,7 +54,7 @@ export default function Experience() {
 
         <Flex gap={2} flexWrap="wrap">
           {COMPETENCES.map((competence, i) => (
-            <Tooltip label={competence.description} placement="top" hasArrow key={i}>
+            <Tooltip label={competence.description} placement="top" key={i}>
               <Box
                 bg="gray.600"
                 fontSize="sm"

@@ -7,7 +7,7 @@ import { TruncateText } from '../common/truncate-text'
 export function ProjectDetails() {
   const project = useProject()
   return (
-    <Flex p={3} direction="column" w="300px" bg="gray.700" minH="full">
+    <Flex p={3} direction="column" w={{ md: '300px' }} bg="gray.700" minH="full">
       <Heading mb={4}>{project.name}</Heading>
       <FormattedText>
         <TruncateText limit={100}>{project.description}</TruncateText>

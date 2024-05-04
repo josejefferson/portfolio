@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/layout'
 export default function Home() {
   return (
     <Page>
-      <Box className="sections">
+      <Box className="sections" mb={8}>
         <Sections.Main />
         <Sections.About />
         <Sections.Languages />

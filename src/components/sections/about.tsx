@@ -1,11 +1,11 @@
-import { Card, CardBody, Container, Flex, Grid, Image, Link, chakra } from '@chakra-ui/react'
+import { Card, CardBody, Container, Flex, Grid, Image, chakra } from '@chakra-ui/react'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
 export default function About() {
   return (
     <Section id={SECTION_IDS.about} title="Sobre mim" titleColor="blue.500">
-      <Container maxW="6xl" my={5}>
+      <Container maxW="6xl">
         <Grid templateColumns={{ base: '1fr', md: '3fr 1fr', lg: '2fr 1fr' }} gap={10}>
           <Card rounded="xl">
             <CardBody fontSize="lg" textAlign="justify">
@@ -14,7 +14,7 @@ export default function About() {
                   src="https://github.com/josejefferson.png"
                   aria-label="Imagem do GitHub de Jefferson Dantas"
                   rounded="lg"
-                  w={[16, 100]}
+                  w={{ base: 16, sm: 100 }}
                   shadow="md"
                   float="left"
                   mr={2}
@@ -43,14 +43,13 @@ export default function About() {
             </CardBody>
           </Card>
 
-          <Flex h="full" align="center">
+          <Flex h="full" align="center" display={{ base: 'none', md: 'flex' }}>
             <Image
               src="/img/languages.svg"
               aria-label="Ilustração com as principais tecnologias que uso: JavaScript, TypeScript, Node.js, React, NextJS, Yarn e GitHub"
               w="full"
               maxW={400}
               mx="auto"
-              display={['none', 'none', 'block']}
             />
           </Flex>
         </Grid>

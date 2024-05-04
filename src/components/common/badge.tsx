@@ -5,7 +5,7 @@ interface IBadgeProps extends IBadge {}
 
 export function Badge({ color, icon: Icon, text, tip }: IBadgeProps) {
   return (
-    <Tooltip label={tip} placement="top" isDisabled={!tip} hasArrow textAlign="center">
+    <Tooltip label={tip} placement="top" isDisabled={!tip} textAlign="center">
       <Flex
         color={`${color}.200`}
         align="center"

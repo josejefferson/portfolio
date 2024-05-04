@@ -5,7 +5,7 @@ import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 export default function Social() {
   return (
     <HStack>
-      <Tooltip hasArrow label="Acesse meu GitHub" placement="bottom">
+      <Tooltip label="Acesse meu GitHub" placement="bottom">
         <IconButton
           as={Link}
           href="https://github.com/josejefferson"
@@ -19,7 +19,7 @@ export default function Social() {
           <IoLogoGithub size={24} />
         </IconButton>
       </Tooltip>
-      <Tooltip hasArrow label="Acesse meu LinkedIn" placement="bottom">
+      <Tooltip label="Acesse meu LinkedIn" placement="bottom">
         <IconButton
           as={Link}
           href="https://www.linkedin.com/in/jose-jefferson/"

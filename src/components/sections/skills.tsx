@@ -20,8 +20,8 @@ import Section from '../common/section'
 export default function Skills() {
   return (
     <Section id={SECTION_IDS.skills} title="Habilidades" titleColor="orange.500">
-      <Container maxW="6xl" my={5}>
-        <SimpleGrid columns={[1, 1, 3]} spacing={5} py={5} h="full">
+      <Container maxW="6xl">
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5} h="full">
           {SKILLS.map((skillCategory, i) => (
             <SkillCard skillCategory={skillCategory} key={i} />
           ))}

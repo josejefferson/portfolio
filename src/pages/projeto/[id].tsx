@@ -18,12 +18,11 @@ export default function Project({ id }: { id: string }) {
     <ProjectProvider project={project}>
       <Page title={`${project.name} - Projeto`}>
         <Container maxW="6xl" px={0} minH="calc(100vh - 64px)">
-          <Flex h="full" minH="calc(100vh - 64px)">
-            <Flex direction="column" flex="1" w="100px" align="center" bg="gray.900">
+          <Flex direction={{ base: 'column', md: 'row' }} h="full" minH="calc(100vh - 64px)">
+            <Flex direction="column" flex="1" w={{ md: '100px' }} align="center" bg="gray.900">
               <Images setCurrentImage={setCurrentImage} />
               <ImageDetails currentImage={currentImage} />
             </Flex>
-
             <ProjectDetails />
           </Flex>
         </Container>

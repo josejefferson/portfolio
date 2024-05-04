@@ -6,7 +6,7 @@ import Section from '../common/section'
 export default function Education() {
   return (
     <Section id={SECTION_IDS.education} title="Formação" titleColor="purple.500">
-      <Container maxW="6xl" my={5}>
+      <Container maxW="6xl">
         <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden" p={5}>
           <Image
             objectFit="contain"
@@ -30,7 +30,7 @@ export default function Education() {
               2019 - 2021
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
+            <Tooltip label="Clique para baixar o PPC" placement="top-start">
               <Link href="/attachments/PPC - Informática.pdf" target="_blank">
                 <Text>Curso Técnico Integrado em Informática (ensino médio)</Text>
               </Link>
@@ -40,7 +40,7 @@ export default function Education() {
               2022 - 2023
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
+            <Tooltip label="Clique para baixar o PPC" placement="top-start">
               <Link href="/attachments/PPC - Eletrônica.pdf" target="_blank">
                 <Text>Curso Técnico Subsequente em Eletrônica</Text>
               </Link>
@@ -50,7 +50,7 @@ export default function Education() {
               2023 - 2026 <chakra.i>(em andamento)</chakra.i>
             </Text>
 
-            <Tooltip label="Clique para baixar o PPC" placement="top-start" hasArrow>
+            <Tooltip label="Clique para baixar o PPC" placement="top-start">
               <Link href="/attachments/PPC - TSI.pdf" target="_blank">
                 <Text>Curso Superior de Tecnologia em Sistemas para Internet</Text>
               </Link>

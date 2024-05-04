@@ -9,7 +9,7 @@ import Section from '../common/section'
 export default function Contact() {
   return (
     <Section id={SECTION_IDS.contact} title="Contato" titleColor="cyan.500">
-      <Container maxW="6xl" my={5}>
+      <Container maxW="6xl">
         <Flex justify="space-evenly" direction={{ base: 'column', md: 'row' }} gap={5}>
           <Link href="mailto:jeffersonn.jjdaj@gmail.com" target="_blank">
             <Card

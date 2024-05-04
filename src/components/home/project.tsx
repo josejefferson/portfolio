@@ -15,32 +15,32 @@ export function Project({ project, i }: { project: IProject; i: number }) {
 
   return (
     <Flex
-      direction={isOdd ? ['column', 'column', 'row'] : ['column', 'column', 'row-reverse']}
+      direction={{ base: 'column', md: isOdd ? 'row' : 'row-reverse' }}
       gap={6}
       sx={{
-        '&:hover > .side-line': { h: [0, 0, '200px'], w: ['200px', '200px', 0] },
+        '&:hover > .side-line': { h: { base: 0, md: '200px' }, w: { base: '200px', md: 0 } },
         '&:hover .images': {
-          transform: ['none', 'none', `rotate3d(0, 1, 0, ${isOdd ? '' : '-'}15deg)`]
+          transform: { base: 'none', md: `rotate3d(0, 1, 0, ${isOdd ? '' : '-'}15deg)` }
         }
       }}
     >
       <Box
-        w={['60px', '60px', 0]}
-        h={[0, 0, '60px']}
+        w={{ base: '60px', md: 0 }}
+        h={{ base: 0, md: '60px' }}
         border="white 1px solid"
         className="side-line"
         transition=".2s ease"
         m="auto"
       />
 
-      <Box w={['full', '500px']} sx={{ perspective: '1600px' }}>
+      <Box w={{ base: 'full', md: 'sm', lg: 'md', xl: 'lg' }} sx={{ perspective: '1600px' }}>
         <Swiper
           pagination
           modules={[Pagination, Autoplay, A11y, Mousewheel]}
           mousewheel
           centeredSlides
           spaceBetween={30}
-          loop
+          loop={project.images.length > 1}
           autoplay={{
             delay: 10000 + Math.floor(Math.random() * 5000),
             disableOnInteraction: false
