@@ -15,6 +15,7 @@ export function Badge({ color, icon: Icon, text, tip }: IBadgeProps) {
         fontWeight={500}
         mb={2}
         gap={1}
+        tabIndex={0}
       >
         <Text fontSize="xs">{text}</Text>
         <Icon size={16} />

@@ -62,6 +62,7 @@ export default function Experience() {
                 py={0.5}
                 px={2}
                 cursor={competence.description ? 'help' : 'default'}
+                tabIndex={competence.description ? 0 : -1}
               >
                 {competence.name}
               </Box>

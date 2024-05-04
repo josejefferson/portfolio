@@ -26,34 +26,29 @@ body {
   background-color: var(--chakra-colors-gray-500);
 }
 
-.skill-card {
-  opacity: 0;
-}
-
-.animate-skill {
-  opacity: 1;
+.skill-card.animate-skill {
   transition: opacity 1s ease;
 }
 
-.animate-skill .skill .skill-image {
+.skill-card.animate-skill .skill .skill-image {
   animation-delay: inherit !important;
   animation-fill-mode: both !important;
   animation: zoom 0.5s ease;
 }
 
-.animate-skill .skill .skill-name {
+.skill-card.animate-skill .skill .skill-name {
   animation-delay: inherit !important;
   animation-fill-mode: both !important;
   animation: fade 0.5s ease;
 }
 
-.animate-skill .skill .skill-bar {
+.skill-card.animate-skill .skill .skill-bar {
   animation-delay: inherit !important;
   animation-fill-mode: both !important;
   animation: fade 0.5s ease;
 }
 
-.animate-skill .skill .skill-bar > div {
+.skill-card.animate-skill .skill .skill-bar > div {
   animation-delay: inherit !important;
   animation-fill-mode: both !important;
   animation: width 2s ease;
