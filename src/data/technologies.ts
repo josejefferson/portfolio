@@ -162,6 +162,12 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://dialogflow.cloud.google.com/'
   },
+  framework7: {
+    name: 'Framework7',
+    image: '/icons/framework7.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://framework7.io/'
+  },
 
   // Bibliotecas
   axios: {
@@ -193,6 +199,12 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.library,
     site: 'https://ejs.co/'
   },
+  esbuild: {
+    name: 'esbuild',
+    image: '/icons/esbuild.svg',
+    type: TECHNOLOGY_TYPES.tool,
+    site: 'https://esbuild.github.io/'
+  },
   eslint: {
     name: 'ESLint',
     image: '/icons/eslint.svg',
@@ -216,6 +228,12 @@ export const TECHNOLOGIES = {
     image: '/icons/jwt.png',
     type: TECHNOLOGY_TYPES.library,
     site: 'https://jwt.io/'
+  },
+  jquery: {
+    name: 'jQuery',
+    image: '/icons/jquery.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://jquery.com/'
   },
   materialUI: {
     name: 'Material UI',
@@ -259,11 +277,23 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.library,
     site: 'https://react-icons.github.io/react-icons/'
   },
+  tailwind: {
+    name: 'Tailwind CSS',
+    image: '/icons/tailwind.svg',
+    type: TECHNOLOGY_TYPES.library,
+    site: 'https://tailwindcss.com/'
+  },
 
   docker: {
     name: 'Docker',
     image: '/icons/docker.png',
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://www.docker.com/'
+  },
+  tampermonkey: {
+    name: 'Tampermonkey',
+    image: '/icons/tampermonkey.svg',
+    type: TECHNOLOGY_TYPES.tool,
+    site: 'https://www.tampermonkey.net/'
   }
 } satisfies Record<string, ITechnology>

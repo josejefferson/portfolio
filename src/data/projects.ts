@@ -2,8 +2,13 @@ import { IBadge } from './badges'
 import { IConcept } from './concepts'
 import { CHATBOT } from './projects/chatbot'
 import { CRANIO } from './projects/cranio'
+import { IFPB_LIVES } from './projects/ifpb-lives'
 import { LAMPYS } from './projects/lampys'
+import { MOBYSTK } from './projects/mobystk'
+import { SPEAK_MEET_MESSAGES } from './projects/speak-meet-messages'
+import { UNO } from './projects/uno'
 import { VAGAZERO } from './projects/vagazero'
+import { WEDDYTOR } from './projects/weddytor'
 import { ITechnology } from './technologies'
 
 export interface IProject {
@@ -25,4 +30,14 @@ export interface IProject {
   }[]
 }
 
-export const PROJECTS: IProject[] = [VAGAZERO, CHATBOT, LAMPYS, CRANIO]
+export const PROJECTS: IProject[] = [
+  VAGAZERO,
+  CHATBOT,
+  LAMPYS,
+  CRANIO,
+  IFPB_LIVES,
+  SPEAK_MEET_MESSAGES,
+  MOBYSTK,
+  WEDDYTOR,
+  UNO
+]

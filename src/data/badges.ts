@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons'
-import { MdCheck, MdClose, MdCode, MdHourglassTop, MdLock, MdWarning } from 'react-icons/md'
+import { MdArchive, MdCheck, MdCode, MdHourglassTop, MdLock } from 'react-icons/md'
 
 export interface IBadge {
   color: string
@@ -32,5 +32,11 @@ export const BADGES = {
     icon: MdLock,
     color: 'gray',
     tip: 'Este projeto não está disponível ao público geral'
+  },
+  archived: {
+    text: 'Arquivado',
+    icon: MdArchive,
+    color: 'yellow',
+    tip: 'Este projeto não está mais sendo desenvolvido'
   }
 } satisfies Record<string, IBadge>

@@ -6,7 +6,9 @@ import { Technology } from '../common/technology'
 
 export function ImageDetails({ currentImage }: { currentImage: number }) {
   const project = useProject()
-  const image = project.detailImages?.[currentImage]!
+  const image = project.detailImages?.[currentImage]
+
+  if (!image) return null
 
   return (
     <Flex direction="column" w="full" bg="blue.700" h="full" position="relative">
