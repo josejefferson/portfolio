@@ -42,6 +42,12 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.language,
     site: 'https://www.python.org/'
   },
+  django: {
+    name: 'Django',
+    image: '/icons/django.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://www.djangoproject.com/'
+  },
   react: {
     name: 'React',
     image: '/icons/react.svg',
@@ -53,6 +59,12 @@ export const TECHNOLOGIES = {
     image: '/icons/nextjs.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://nextjs.org/'
+  },
+  vike: {
+    name: 'Vike',
+    image: '/icons/vike.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://vike.dev/'
   },
   nestjs: {
     name: 'NestJS',
@@ -77,6 +89,30 @@ export const TECHNOLOGIES = {
     image: '/icons/angularjs.svg',
     type: TECHNOLOGY_TYPES.framework,
     site: 'https://angularjs.org/'
+  },
+  vue: {
+    name: 'Vue.js',
+    image: '/icons/vue.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://vuejs.org/'
+  },
+  solid: {
+    name: 'SolidJS',
+    image: '/icons/solid-js.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://www.solidjs.com/'
+  },
+  preact: {
+    name: 'Preact',
+    image: '/icons/preact.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://preactjs.com/'
+  },
+  qwik: {
+    name: 'Qwik',
+    image: '/icons/qwik.svg',
+    type: TECHNOLOGY_TYPES.framework,
+    site: 'https://qwik.dev/'
   },
   express: {
     name: 'Express',
@@ -167,6 +203,12 @@ export const TECHNOLOGIES = {
     image: '/icons/dialogflow.svg',
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://dialogflow.cloud.google.com/'
+  },
+  chrome: {
+    name: 'Chrome',
+    image: '/icons/chrome.svg',
+    type: TECHNOLOGY_TYPES.platform,
+    site: 'https://www.google.com/chrome/'
   },
   framework7: {
     name: 'Framework7',
