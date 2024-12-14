@@ -1,4 +1,5 @@
 import Link from '#/components/common/link'
+import { GITHUB, LINKEDIN, NAME } from '#/data/contact'
 import { Box, BoxProps, Button, Container, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
 import useScrollPosition from '@react-hook/window-scroll'
 import { FaRegFilePdf } from 'react-icons/fa6'
@@ -49,7 +50,7 @@ function Details() {
 
       <Box w="fit-content" mx={{ base: 'auto', md: 0 }} mb={4}>
         <Heading fontSize="e6xl" color="primary.500" mb={2}>
-          Jefferson Dantas
+          {NAME}
         </Heading>
         <Box bg="primary.500" h={1.5} rounded="full" />
       </Box>
@@ -62,7 +63,7 @@ function Details() {
         <Tooltip label="Acesse meu GitHub" placement="bottom">
           <Button
             as={Link}
-            href="https://github.com/josejefferson"
+            href={`https://github.com/${GITHUB}`}
             target="_blank"
             aria-label="GitHub"
             size="lg"
@@ -71,14 +72,14 @@ function Details() {
             leftIcon={<IoLogoGithub size={36} />}
             px={2}
           >
-            josejefferson
+            {GITHUB}
           </Button>
         </Tooltip>
 
         <Tooltip label="Acesse meu LinkedIn" placement="bottom">
           <Button
             as={Link}
-            href="https://www.linkedin.com/in/jose-jefferson/"
+            href={`https://www.linkedin.com/in/${LINKEDIN}/`}
             target="_blank"
             aria-label="LinkedIn"
             size="lg"
@@ -87,7 +88,7 @@ function Details() {
             leftIcon={<IoLogoLinkedin size={36} />}
             px={2}
           >
-            jose-jefferson
+            {LINKEDIN}
           </Button>
         </Tooltip>
 
@@ -115,8 +116,8 @@ function Photo(props: BoxProps) {
   return (
     <Box position="relative" w="fit-content" m="auto" {...props}>
       <Image
-        src="https://github.com/josejefferson.png"
-        aria-label="Imagem do GitHub de Jefferson Dantas"
+        src={`https://github.com/${GITHUB}.png`}
+        aria-label={`Imagem do GitHub de ${NAME}`}
         rounded="full"
         w={{ base: '20em', lg: '30em' }}
         shadow="md"
@@ -126,7 +127,7 @@ function Photo(props: BoxProps) {
       <Tooltip label="Acesse meu GitHub" placement="left">
         <IconButton
           as={Link}
-          href="https://github.com/josejefferson"
+          href={`https://github.com/${GITHUB}`}
           target="_blank"
           aria-label="GitHub"
           position="absolute"

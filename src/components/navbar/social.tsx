@@ -1,5 +1,6 @@
-import { HStack, IconButton, Tooltip } from '@chakra-ui/react'
 import Link from '#/components/common/link'
+import { GITHUB, LINKEDIN } from '#/data/contact'
+import { HStack, IconButton, Tooltip } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 
 export default function Social() {
@@ -8,7 +9,7 @@ export default function Social() {
       <Tooltip label="Acesse meu GitHub" placement="bottom">
         <IconButton
           as={Link}
-          href="https://github.com/josejefferson"
+          href={`https://github.com/${GITHUB}`}
           target="_blank"
           aria-label="GitHub"
           size="sm"
@@ -22,7 +23,7 @@ export default function Social() {
       <Tooltip label="Acesse meu LinkedIn" placement="bottom">
         <IconButton
           as={Link}
-          href="https://www.linkedin.com/in/jose-jefferson/"
+          href={`https://www.linkedin.com/in/${LINKEDIN}/`}
           target="_blank"
           aria-label="LinkedIn"
           size="sm"

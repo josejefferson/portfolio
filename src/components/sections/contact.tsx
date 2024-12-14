@@ -1,17 +1,17 @@
-import { Card, CardBody, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import Link from '#/components/common/link'
+import { EMAIL, LINKEDIN } from '#/data/contact'
+import { Card, CardBody, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import { IoLogoLinkedin } from 'react-icons/io'
 import { MdMail } from 'react-icons/md'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
 
-// TODO: colocar contatos em um arquivo separado
 export default function Contact() {
   return (
     <Section id={SECTION_IDS.contact} title="Contato" titleColor="cyan.500">
       <Container maxW="6xl">
         <Flex justify="space-evenly" direction={{ base: 'column', md: 'row' }} gap={5}>
-          <Link href="mailto:jeffersonn.jjdaj@gmail.com" target="_blank">
+          <Link href={`mailto:${EMAIL}`} target="_blank">
             <Card
               direction="row"
               variant="outline"
@@ -31,12 +31,12 @@ export default function Contact() {
 
               <CardBody p={2}>
                 <Heading size="md">E-mail</Heading>
-                <Text>jeffersonn.jjdaj@gmail.com</Text>
+                <Text>{EMAIL}</Text>
               </CardBody>
             </Card>
           </Link>
 
-          <Link href="https://www.linkedin.com/in/jose-jefferson/" target="_blank">
+          <Link href={`https://www.linkedin.com/in/${LINKEDIN}/`} target="_blank">
             <Card
               direction="row"
               variant="outline"
@@ -56,7 +56,7 @@ export default function Contact() {
 
               <CardBody p={2}>
                 <Heading size="md">LinkedIn</Heading>
-                <Text>jose-jefferson</Text>
+                <Text>{LINKEDIN}</Text>
               </CardBody>
             </Card>
           </Link>

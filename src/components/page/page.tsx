@@ -1,7 +1,8 @@
-import { PropsWithChildren } from 'react'
-import Navbar from '../navbar/navbar'
+import { NAME } from '#/data/contact'
 import Head from 'next/head'
+import { PropsWithChildren } from 'react'
 import Footer from '../footer/footer'
+import Navbar from '../navbar/navbar'
 
 interface IPageProps extends PropsWithChildren {
   title?: string
@@ -11,9 +12,9 @@ export default function Page({ children, title }: IPageProps) {
   let pageTitle = title
 
   if (pageTitle) {
-    pageTitle = `${pageTitle} - Jefferson Dantas`
+    pageTitle = `${pageTitle} - ` + NAME
   } else {
-    pageTitle = 'Jefferson Dantas'
+    pageTitle = NAME
   }
 
   return (

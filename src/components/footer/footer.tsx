@@ -1,7 +1,8 @@
+import { EMAIL, GITHUB, LINKEDIN } from '#/data/contact'
 import { Box, Button, ButtonGroup, Container, HStack, IconButton, Text } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
-import Link from '../common/link'
 import { MdMail, MdOutlineCode } from 'react-icons/md'
+import Link from '../common/link'
 
 export default function Footer() {
   return (
@@ -14,21 +15,21 @@ export default function Footer() {
           <ButtonGroup variant="ghost" colorScheme="white" spacing={3}>
             <IconButton
               as={Link}
-              href="https://github.com/josejefferson"
+              href={`https://github.com/${GITHUB}`}
               target="_blank"
               aria-label="GitHub"
               icon={<IoLogoGithub size={24} />}
             />
             <IconButton
               as={Link}
-              href="https://www.linkedin.com/in/jose-jefferson/"
+              href={`https://www.linkedin.com/in/${LINKEDIN}/`}
               target="_blank"
               aria-label="LinkedIn"
               icon={<IoLogoLinkedin size={24} />}
             />
             <IconButton
               as={Link}
-              href="mailto:jeffersonn.jjdaj@gmail.com"
+              href={`mailto:${EMAIL}`}
               target="_blank"
               aria-label="E-mail"
               icon={<MdMail size={24} />}

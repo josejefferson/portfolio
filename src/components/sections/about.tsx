@@ -1,3 +1,4 @@
+import { GITHUB, NAME } from '#/data/contact'
 import { Card, CardBody, Container, Flex, Grid, Image, chakra } from '@chakra-ui/react'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
@@ -11,8 +12,8 @@ export default function About() {
             <CardBody fontSize="lg" textAlign="justify">
               <chakra.p>
                 <Image
-                  src="https://github.com/josejefferson.png"
-                  aria-label="Imagem do GitHub de Jefferson Dantas"
+                  src={`https://github.com/${GITHUB}.png`}
+                  aria-label={`Imagem do GitHub de ${NAME}`}
                   rounded="lg"
                   w={{ base: 16, sm: 100 }}
                   shadow="md"

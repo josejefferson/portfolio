@@ -1,12 +1,13 @@
+import Link from '#/components/common/link'
+import { useProject } from '#/contexts/project'
+import { GITHUB, NAME } from '#/data/contact'
 import { Avatar } from '@chakra-ui/avatar'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
-import Link from '#/components/common/link'
 import ScrollToTop from '../common/scroll-top'
+import NavDrawer from './drawer'
 import NavDesktop from './nav-desktop'
 import NavMobile from './nav-mobile'
-import NavDrawer from './drawer'
-import { useProject } from '#/contexts/project'
 
 export default function Navbar() {
   const project = useProject()
@@ -36,9 +37,9 @@ export default function Navbar() {
             <HStack>
               <NavDrawer />
               <HStack as={Link} href="/" borderWidth={1} rounded="full" p={1} position="relative">
-                <Avatar src="https://github.com/josejefferson.png" size="sm" />
+                <Avatar src={`https://github.com/${GITHUB}.png`} size="sm" />
                 <Text fontWeight={500} px={2} hidden={!breakpointLg}>
-                  {project?.name || 'Jefferson Dantas'}
+                  {project?.name || NAME}
                 </Text>
               </HStack>
             </HStack>
