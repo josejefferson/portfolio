@@ -40,18 +40,6 @@ body {
   animation: fade 0.5s ease;
 }
 
-.skill-card.animate-skill .skill .skill-bar {
-  animation-delay: inherit !important;
-  animation-fill-mode: both !important;
-  animation: fade 0.5s ease;
-}
-
-.skill-card.animate-skill .skill .skill-bar > div {
-  animation-delay: inherit !important;
-  animation-fill-mode: both !important;
-  animation: width 2s ease;
-}
-
 @keyframes zoom {
   from {
     opacity: 0;
@@ -60,12 +48,6 @@ body {
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes width {
-  from {
-    width: 0;
   }
 }
 

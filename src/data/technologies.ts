@@ -108,6 +108,12 @@ export const TECHNOLOGIES = {
     type: TECHNOLOGY_TYPES.platform,
     site: 'https://nodejs.org/en'
   },
+  bun: {
+    name: 'Bun',
+    image: '/icons/bun.svg',
+    type: TECHNOLOGY_TYPES.platform,
+    site: 'https://bun.sh/'
+  },
   vscode: {
     name: 'Visual Studio Code',
     image: '/icons/vscode.svg',

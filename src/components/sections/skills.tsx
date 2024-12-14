@@ -16,6 +16,7 @@ import {
 import { InView } from 'react-intersection-observer'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'
+import Link from '../common/link'
 
 export default function Skills() {
   return (
@@ -56,7 +57,16 @@ function SkillCard({ skillCategory }: ISkillCardProps) {
 
           <CardBody>
             {items.map((item, i) => (
-              <Flex mb={3} gap={3} key={i} className="skill" sx={{ animationDelay: `${i * 100}ms !important` }}>
+              <Flex
+                as={Link}
+                href={item.technology.site}
+                align="center"
+                mb={3}
+                gap={3}
+                key={i}
+                className="skill"
+                sx={{ animationDelay: `${i * 100}ms !important` }}
+              >
                 <Image
                   className="skill-image"
                   w={10}
@@ -65,19 +75,9 @@ function SkillCard({ skillCategory }: ISkillCardProps) {
                   alt="Ícone"
                   objectFit="contain"
                 />
-                <Box flex="1" sx={{ animationDelay: `${i * 100}ms !important` }}>
-                  <Text fontWeight={500} mb={2} className="skill-name">
-                    {item.technology.name}
-                  </Text>
-                  <Progress
-                    size="xs"
-                    value={item.skill}
-                    colorScheme={color}
-                    borderRadius="full"
-                    className="skill-bar"
-                    sx={{ animationDelay: `${i * 100}ms !important` }}
-                  />
-                </Box>
+                <Text fontWeight={500} className="skill-name">
+                  {item.technology.name}
+                </Text>
               </Flex>
             ))}
           </CardBody>

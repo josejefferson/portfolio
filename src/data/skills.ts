@@ -8,7 +8,6 @@ export interface ISkillCategory {
 
 export interface ISkill {
   technology: ITechnology
-  skill: number
 }
 
 export const SKILLS: ISkillCategory[] = [
@@ -16,43 +15,44 @@ export const SKILLS: ISkillCategory[] = [
     title: 'Linguagens',
     color: 'blue',
     items: [
-      { technology: TECHNOLOGIES.typescript, skill: 80 },
-      { technology: TECHNOLOGIES.javascript, skill: 90 },
-      { technology: TECHNOLOGIES.html, skill: 100 },
-      { technology: TECHNOLOGIES.css, skill: 95 },
-      { technology: TECHNOLOGIES.sass, skill: 40 },
-      { technology: TECHNOLOGIES.python, skill: 60 }
+      { technology: TECHNOLOGIES.typescript },
+      { technology: TECHNOLOGIES.javascript },
+      { technology: TECHNOLOGIES.html },
+      { technology: TECHNOLOGIES.css },
+      { technology: TECHNOLOGIES.sass },
+      { technology: TECHNOLOGIES.python }
     ]
   },
   {
     title: 'Frameworks e bibliotecas',
     color: 'red',
     items: [
-      { technology: TECHNOLOGIES.react, skill: 90 },
-      { technology: TECHNOLOGIES.nextjs, skill: 95 },
-      { technology: TECHNOLOGIES.nestjs, skill: 80 },
-      { technology: TECHNOLOGIES.svelte, skill: 65 },
-      { technology: TECHNOLOGIES.angular, skill: 50 },
-      { technology: TECHNOLOGIES.angularjs, skill: 40 },
-      { technology: TECHNOLOGIES.express, skill: 95 },
-      { technology: TECHNOLOGIES.socketio, skill: 90 },
-      { technology: TECHNOLOGIES.prisma, skill: 85 },
-      { technology: TECHNOLOGIES.bootstrap, skill: 100 }
+      { technology: TECHNOLOGIES.react },
+      { technology: TECHNOLOGIES.nextjs },
+      { technology: TECHNOLOGIES.nestjs },
+      { technology: TECHNOLOGIES.svelte },
+      { technology: TECHNOLOGIES.angular },
+      { technology: TECHNOLOGIES.angularjs },
+      { technology: TECHNOLOGIES.express },
+      { technology: TECHNOLOGIES.socketio },
+      { technology: TECHNOLOGIES.prisma },
+      { technology: TECHNOLOGIES.bootstrap }
     ]
   },
   {
     title: 'Ferramentas',
     color: 'green',
     items: [
-      { technology: TECHNOLOGIES.nodejs, skill: 97 },
-      { technology: TECHNOLOGIES.vscode, skill: 99 },
-      { technology: TECHNOLOGIES.git, skill: 90 },
-      { technology: TECHNOLOGIES.github, skill: 90 },
-      { technology: TECHNOLOGIES.mongodb, skill: 80 },
-      { technology: TECHNOLOGIES.postgresql, skill: 70 },
-      { technology: TECHNOLOGIES.yarn, skill: 90 },
-      { technology: TECHNOLOGIES.npm, skill: 85 },
-      { technology: TECHNOLOGIES.figma, skill: 60 }
+      { technology: TECHNOLOGIES.nodejs },
+      { technology: TECHNOLOGIES.bun },
+      { technology: TECHNOLOGIES.vscode },
+      { technology: TECHNOLOGIES.git },
+      { technology: TECHNOLOGIES.github },
+      { technology: TECHNOLOGIES.mongodb },
+      { technology: TECHNOLOGIES.postgresql },
+      { technology: TECHNOLOGIES.yarn },
+      { technology: TECHNOLOGIES.npm },
+      { technology: TECHNOLOGIES.figma }
     ]
   }
 ]
