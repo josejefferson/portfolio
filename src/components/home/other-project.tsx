@@ -31,6 +31,7 @@ export function OtherProject({ project }: { project: IOtherProject }) {
               size="sm"
               colorScheme="white"
               leftIcon={<MdOpenInNew size={24} />}
+              target="_blank"
             >
               Abrir
             </Button>
@@ -44,6 +45,7 @@ export function OtherProject({ project }: { project: IOtherProject }) {
               size="sm"
               colorScheme="white"
               leftIcon={<IoLogoGithub size={24} />}
+              target="_blank"
             >
               GitHub
             </Button>
