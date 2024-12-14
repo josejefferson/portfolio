@@ -1,11 +1,11 @@
 import { Badge } from '#/components/common/badge'
-import { IProject } from '#/data/projects'
 import FormattedText from '#/components/common/formatted-text'
-import { AspectRatio, Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
 import Link from '#/components/common/link'
+import { IProject } from '#/data/projects'
+import { AspectRatio, Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io'
 import { MdOpenInNew } from 'react-icons/md'
-import { A11y, Autoplay, Mousewheel, Pagination } from 'swiper/modules'
+import { A11y, Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Technology } from '../common/technology'
 import { TruncateText } from '../common/truncate-text'
@@ -36,8 +36,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
       <Box w={{ base: 'full', md: 'sm', lg: 'md', xl: 'lg' }} sx={{ perspective: '1600px' }}>
         <Swiper
           pagination
-          modules={[Pagination, Autoplay, A11y, Mousewheel]}
-          mousewheel
+          modules={[Pagination, Autoplay, A11y]}
           centeredSlides
           spaceBetween={30}
           loop={project.images.length > 1}

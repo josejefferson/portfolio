@@ -1,6 +1,8 @@
 import { ForceTheme } from '#/components/common/force-theme'
 import PageTransition from '#/components/page/transition'
 import '#/styles/globals.css'
+import '#/styles/nprogress.css'
+import '#/styles/swiper.css'
 import { theme } from '#/utils/theme'
 import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'

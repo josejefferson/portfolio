@@ -1,6 +1,6 @@
 import { useProject } from '#/contexts/project'
 import { AspectRatio, Box, Image } from '@chakra-ui/react'
-import { A11y, Mousewheel, Navigation } from 'swiper/modules'
+import { A11y, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export function Images({ setCurrentImage }: { setCurrentImage: (i: number) => void }) {
@@ -9,8 +9,7 @@ export function Images({ setCurrentImage }: { setCurrentImage: (i: number) => vo
     <Box w="full" userSelect="none">
       <Swiper
         navigation
-        modules={[Mousewheel, Navigation, A11y]}
-        mousewheel
+        modules={[Navigation, A11y]}
         centeredSlides
         loop
         spaceBetween={30}

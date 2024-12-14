@@ -17,7 +17,7 @@ export default function PageTransition({ children }: PropsWithChildren) {
   }, [])
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={router.route}
         initial="initialState"
