@@ -1,6 +1,6 @@
 import FormattedText from '#/components/common/formatted-text'
 import { useProject } from '#/contexts/project'
-import { Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Technology } from '../common/technology'
 
@@ -26,7 +26,6 @@ export function ImageDetails({ currentImage }: { currentImage: number }) {
                 {image.title}
               </Heading>
               <FormattedText align="justify">{image.description}</FormattedText>
-              <Text align="justify"></Text>
             </Flex>
             <Flex
               maxW="calc(var(--chakra-sizes-7) * 4 + var(--chakra-space-1) * 3)"
