@@ -32,8 +32,8 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@josejefferson/eslint-config-react": "^1.1.0",
-    "@josejefferson/eslint-config-typescript": "^1.0.3",
+    "@josejefferson/eslint-config-react": "^1.2.2",
+    "@josejefferson/eslint-config-typescript": "^1.1.0",
     "@types/nprogress": "^0.2.3",
     "@types/react-linkify": "^1.0.4",
     "eslint": "8.57.1",

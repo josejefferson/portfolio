@@ -1,4 +1,4 @@
 {
-  "extends": ["next", "@josejefferson/eslint-config-typescript", "@josejefferson/eslint-config-react"],
+  "extends": ["next", "@josejefferson/eslint-config-react", "@josejefferson/eslint-config-typescript"],
   "ignorePatterns": ["*.js"]
 }
