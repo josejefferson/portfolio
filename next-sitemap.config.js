@@ -12,7 +12,7 @@ const PROJECT_PATHS = [
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.VERCEL_URL || 'http://localhost:3000',
+  siteUrl: 'https://jeffersondantas.vercel.app',
   generateRobotsTxt: true,
   additionalPaths: async (config) => {
     return PROJECT_PATHS.map((path) => ({

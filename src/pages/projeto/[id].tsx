@@ -5,7 +5,7 @@ import { ProjectDetails } from '#/components/project/project-details'
 import ProjectProvider from '#/contexts/project'
 import { PROJECTS } from '#/data/projects'
 import { Container, Flex } from '@chakra-ui/react'
-import { GetServerSideProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { useState } from 'react'
 
 export default function Project({ id }: { id: string }) {
@@ -31,6 +31,13 @@ export default function Project({ id }: { id: string }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  return { props: { id: context.query.id } }
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  return { props: { id: params?.id } }
+}
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: PROJECTS.filter((project) => project.id).map((project) => ({ params: { id: project.id } })),
+    fallback: false
+  }
 }
