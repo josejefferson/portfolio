@@ -30,6 +30,7 @@ export interface IProject {
   }[]
 }
 
+// Ao adicionar um projeto aqui, não se esqueça de adicionar o link no arquivo "next-sitemap.config.js"
 export const PROJECTS: IProject[] = [
   VAGAZERO,
   CHATBOT,

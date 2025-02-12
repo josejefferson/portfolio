@@ -4,6 +4,8 @@
 /dist/
 /public/sw.js
 /public/workbox-*.js
+/public/robots.txt
+/public/sitemap*.xml
 
 # dependencies
 /node_modules

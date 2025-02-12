@@ -9,6 +9,7 @@ export default function Document() {
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="icon" type="image/png" sizes="32x32" href={`https://github.com/${GITHUB}.png`} />
+        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
       </Head>
       <body>
         <ColorModeScript initialColorMode="dark" />
