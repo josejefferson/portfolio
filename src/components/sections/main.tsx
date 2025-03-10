@@ -1,5 +1,5 @@
 import Link from '#/components/common/link'
-import { GITHUB, LINKEDIN, NAME } from '#/data/contact'
+import { GITHUB, JOB_NAME, LINKEDIN, NAME } from '#/data/info'
 import { Box, BoxProps, Button, Container, Heading, IconButton, Image, Stack, Text, Tooltip } from '@chakra-ui/react'
 import useScrollPosition from '@react-hook/window-scroll'
 import { FaRegFilePdf } from 'react-icons/fa6'
@@ -57,7 +57,7 @@ function Details() {
       </Box>
 
       <Heading as="div" fontSize="e4xl" fontWeight={200} mb={4}>
-        Desenvolvedor web full-stack
+        {JOB_NAME}
       </Heading>
 
       <Stack mt={10} direction={{ base: 'column', md: 'row' }} maxW={{ base: 'xs', md: 'unset' }} mx="auto">

@@ -1,6 +1,6 @@
 import Link from '#/components/common/link'
 import { useProject } from '#/contexts/project'
-import { GITHUB, NAME } from '#/data/contact'
+import { GITHUB, NAME } from '#/data/info'
 import { Avatar } from '@chakra-ui/avatar'
 import { Box, Container, HStack, Text } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'

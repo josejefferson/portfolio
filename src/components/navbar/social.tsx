@@ -1,5 +1,5 @@
 import Link from '#/components/common/link'
-import { GITHUB, LINKEDIN } from '#/data/contact'
+import { GITHUB, LINKEDIN } from '#/data/info'
 import { HStack, IconButton, Tooltip } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 

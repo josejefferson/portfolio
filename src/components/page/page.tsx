@@ -1,4 +1,4 @@
-import { NAME } from '#/data/contact'
+import { JOB_NAME, NAME } from '#/data/info'
 import { SkipNavContent } from '@chakra-ui/react'
 import Head from 'next/head'
 import { PropsWithChildren } from 'react'
@@ -13,9 +13,9 @@ export default function Page({ children, title }: IPageProps) {
   let pageTitle = title
 
   if (pageTitle) {
-    pageTitle = `${pageTitle} - ` + NAME
+    pageTitle = `${pageTitle} | ` + NAME
   } else {
-    pageTitle = NAME
+    pageTitle = NAME + ' - ' + JOB_NAME
   }
 
   return (

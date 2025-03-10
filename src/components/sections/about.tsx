@@ -1,4 +1,4 @@
-import { GITHUB, NAME } from '#/data/contact'
+import { GITHUB, NAME } from '#/data/info'
 import { Card, CardBody, Container, Flex, Grid, Image, chakra } from '@chakra-ui/react'
 import { SECTION_IDS } from '.'
 import Section from '../common/section'

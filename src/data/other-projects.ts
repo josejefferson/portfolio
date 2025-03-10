@@ -17,6 +17,7 @@ import {
   MdTextRotationNone
 } from 'react-icons/md'
 import { TbTicTac } from 'react-icons/tb'
+import { PORTFOLIO_URL } from './info'
 import { ITechnology, TECHNOLOGIES } from './technologies'
 
 export interface IOtherProject {
@@ -36,7 +37,7 @@ export const OTHER_PROJECTS: IOtherProject[] = [
     color: 'blue',
     icon: MdOutlineAccountCircle,
     github: 'https://github.com/josejefferson/portfolio',
-    link: 'https://jeffersondantas.vercel.app/',
+    link: PORTFOLIO_URL,
     mainTechnologies: [TECHNOLOGIES.typescript, TECHNOLOGIES.react, TECHNOLOGIES.nextjs, TECHNOLOGIES.chakraUI]
   },
   {

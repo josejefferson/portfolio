@@ -15,6 +15,7 @@ const PROJECT_PATHS = [
 module.exports = {
   siteUrl: 'https://jeffersondantas.vercel.app',
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   additionalPaths: async (config) => {
     return PROJECT_PATHS.map((path) => ({
       loc: path,

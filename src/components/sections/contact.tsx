@@ -1,5 +1,5 @@
 import Link from '#/components/common/link'
-import { EMAIL, LINKEDIN } from '#/data/contact'
+import { EMAIL, LINKEDIN } from '#/data/info'
 import { Card, CardBody, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import { IoLogoLinkedin } from 'react-icons/io'
 import { MdMail } from 'react-icons/md'

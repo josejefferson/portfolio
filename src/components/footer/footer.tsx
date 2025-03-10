@@ -1,4 +1,4 @@
-import { EMAIL, GITHUB, LINKEDIN } from '#/data/contact'
+import { EMAIL, GITHUB, LINKEDIN } from '#/data/info'
 import { Box, Button, ButtonGroup, Container, HStack, IconButton, Text } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import { MdMail, MdOutlineCode } from 'react-icons/md'
