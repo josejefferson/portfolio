@@ -11,7 +11,10 @@ export const SPEAK_MEET_MESSAGES: IProject = {
   description:
     'Monitore o chat do Google Meet enquanto apresenta a tela. Com esta extensão, você ouve as novas mensagens em ' +
     'voz alta, sem precisar alternar para a tela do Meet.',
-  images: ['/img/projects/speak-meet-messages-botao.webp', '/img/projects/speak-meet-messages-opcoes.webp'],
+  images: [
+    '/img/projects/speak-meet-messages/speak-meet-messages-botao.webp',
+    '/img/projects/speak-meet-messages/speak-meet-messages-opcoes.webp'
+  ],
   technologies: [TECHNOLOGIES.tampermonkey, TECHNOLOGIES.javascript, TECHNOLOGIES.css, TECHNOLOGIES.html],
   detailImages: [
     {
@@ -19,7 +22,7 @@ export const SPEAK_MEET_MESSAGES: IProject = {
       description:
         'Na barra de ferramentas do Google Meet, foi adicionado um botão que permite ativar ou desativar a leitura ' +
         'em voz alta das mensagens.',
-      src: '/img/projects/speak-meet-messages-botao.webp',
+      src: '/img/projects/speak-meet-messages/speak-meet-messages-botao.webp',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript]
     },
     {
@@ -30,7 +33,7 @@ export const SPEAK_MEET_MESSAGES: IProject = {
         'texto introdutório para facilitar o reconhecimento das mensagens, configurar a exibição do nome do ' +
         'remetente e ajustar a velocidade da fala conforme a preferência. Além disso, é possível definir o ' +
         'comportamento da extensão durante o Google Meet para evitar interferências nas reuniões.',
-      src: '/img/projects/speak-meet-messages-opcoes.webp',
+      src: '/img/projects/speak-meet-messages/speak-meet-messages-opcoes.webp',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript]
     }
   ]

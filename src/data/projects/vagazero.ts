@@ -13,9 +13,9 @@ export const VAGAZERO: IProject = {
     'coordenadores têm acesso ao registro de faltas, permitindo uma gestão mais eficiente e transparente do quadro ' +
     'de docentes.',
   images: [
-    '/img/projects/vagazero-tela-inicial.webp',
-    '/img/projects/vagazero-adiantar-aulas.webp',
-    '/img/projects/vagazero-faltar-aulas.webp'
+    '/img/projects/vagazero/vagazero-tela-inicial.webp',
+    '/img/projects/vagazero/vagazero-adiantar-aulas.webp',
+    '/img/projects/vagazero/vagazero-faltar-aulas.webp'
   ],
   mainTechnologies: [
     TECHNOLOGIES.nodejs,
@@ -58,20 +58,20 @@ export const VAGAZERO: IProject = {
       description:
         'Aqui está um exemplo de como um professor pode registrar suas faltas e adiantamentos de aulas de forma ' +
         'simples e eficiente no sistema.',
-      src: '/img/projects/vagazero-demonstracao.webp'
+      src: '/img/projects/vagazero/vagazero-demonstracao.webp'
     },
     {
       title: 'Tela inicial',
       description:
         'Nesta seção, é apresentado um resumo das faltas e aulas adiantadas do professor, além de botões intuitivos ' +
         'que permitem que ele registre suas faltas ou adiante aulas com facilidade.',
-      src: '/img/projects/vagazero-tela-inicial.webp',
+      src: '/img/projects/vagazero/vagazero-tela-inicial.webp',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.nextjs, TECHNOLOGIES.dayJS]
     },
     {
       title: 'Faltar aulas',
       description: 'Nesta seção, o professor pode selecionar os horários em que deseja faltar.',
-      src: '/img/projects/vagazero-faltar-aulas.webp',
+      src: '/img/projects/vagazero/vagazero-faltar-aulas.webp',
       technologies: [
         TECHNOLOGIES.chakraUI,
         TECHNOLOGIES.react,
@@ -85,7 +85,7 @@ export const VAGAZERO: IProject = {
     {
       title: 'Adiantar aulas',
       description: 'Nesta área, o professor pode selecionar os horários disponíveis para adiantar suas aulas.',
-      src: '/img/projects/vagazero-adiantar-aulas.webp',
+      src: '/img/projects/vagazero/vagazero-adiantar-aulas.webp',
       technologies: [
         TECHNOLOGIES.chakraUI,
         TECHNOLOGIES.react,

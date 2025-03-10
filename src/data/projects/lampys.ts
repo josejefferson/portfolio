@@ -13,9 +13,9 @@ export const LAMPYS: IProject = {
     'inventários com facilidade. As compras realizadas pelos usuários são redirecionadas ao WhatsApp e gerenciadas ' +
     'pelo comerciante.',
   images: [
-    '/img/projects/lampys-lojaweb-tela-inicial.webp',
-    '/img/projects/lampys-lojaweb-produto.webp',
-    '/img/projects/lampys-lojaweb-administracao.webp'
+    '/img/projects/lampys/lampys-lojaweb-tela-inicial.webp',
+    '/img/projects/lampys/lampys-lojaweb-produto.webp',
+    '/img/projects/lampys/lampys-lojaweb-administracao.webp'
   ],
   technologies: [
     TECHNOLOGIES.nodejs,
@@ -32,19 +32,19 @@ export const LAMPYS: IProject = {
   detailImages: [
     {
       title: 'Tela Inicial',
-      src: '/img/projects/lampys-lojaweb-tela-inicial.webp'
+      src: '/img/projects/lampys/lampys-lojaweb-tela-inicial.webp'
     },
     {
       title: 'Visualização do Produto',
-      src: '/img/projects/lampys-lojaweb-produto.webp'
+      src: '/img/projects/lampys/lampys-lojaweb-produto.webp'
     },
     {
       title: 'Checkout do Carrinho',
-      src: '/img/projects/lampys-lojaweb-checkout.webp'
+      src: '/img/projects/lampys/lampys-lojaweb-checkout.webp'
     },
     {
       title: 'Administração',
-      src: '/img/projects/lampys-lojaweb-administracao.webp'
+      src: '/img/projects/lampys/lampys-lojaweb-administracao.webp'
     }
   ]
 }

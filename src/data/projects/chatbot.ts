@@ -13,9 +13,9 @@ export const CHATBOT: IProject = {
     'Dialogflow, o bot identifica as intenções dos usuários, garantindo respostas precisas e relevantes para suas ' +
     'perguntas.',
   images: [
-    '/img/projects/chatbot-web-oi.webp',
-    '/img/projects/chatbot-telegram-sites.webp',
-    '/img/projects/chatbot-web-cursos.webp'
+    '/img/projects/chatbot/chatbot-web-oi.webp',
+    '/img/projects/chatbot/chatbot-telegram-sites.webp',
+    '/img/projects/chatbot/chatbot-web-cursos.webp'
   ],
   technologies: [
     TECHNOLOGIES.dialogflow,
@@ -29,19 +29,19 @@ export const CHATBOT: IProject = {
   detailImages: [
     {
       title: 'Tela Inicial do Site',
-      src: '/img/projects/chatbot-web-oi.webp'
+      src: '/img/projects/chatbot/chatbot-web-oi.webp'
     },
     {
       title: 'Chatbot no Telegram',
-      src: '/img/projects/chatbot-telegram-sites.webp'
+      src: '/img/projects/chatbot/chatbot-telegram-sites.webp'
     },
     {
       title: 'Perguntas ao Chatbot',
-      src: '/img/projects/chatbot-web-cursos.webp'
+      src: '/img/projects/chatbot/chatbot-web-cursos.webp'
     },
     {
       title: 'Fluxo de Conversa',
-      src: '/img/projects/chatbot-web-inscricao.webp'
+      src: '/img/projects/chatbot/chatbot-web-inscricao.webp'
     }
   ]
 }

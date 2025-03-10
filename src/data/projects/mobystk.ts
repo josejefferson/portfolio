@@ -12,9 +12,9 @@ export const MOBYSTK: IProject = {
     'versátil e personalizável, oferecendo uma alternativa útil para aqueles que não possuem um controle físico ' +
     'para PC.',
   images: [
-    '/img/projects/mobystk-controle.webp',
-    '/img/projects/mobystk-configuracoes.webp',
-    '/img/projects/mobystk-server.webp'
+    '/img/projects/mobystk/mobystk-controle.webp',
+    '/img/projects/mobystk/mobystk-configuracoes.webp',
+    '/img/projects/mobystk/mobystk-server.webp'
   ],
   technologies: [
     TECHNOLOGIES.python,
@@ -31,7 +31,7 @@ export const MOBYSTK: IProject = {
         'funções para salvar, carregar e pausar o jogo. Nas configurações, é possível ocultar qualquer um desses ' +
         'botões. Futuramente, será possível personalizar o tamanho e a posição dos botões, além de adicionar novos ' +
         'botões conforme necessário.',
-      src: '/img/projects/mobystk-controle.webp',
+      src: '/img/projects/mobystk/mobystk-controle.webp',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.typescript, TECHNOLOGIES.esbuild]
     },
     {
@@ -39,13 +39,13 @@ export const MOBYSTK: IProject = {
       description:
         'O MobyStk inclui layouts predefinidos para PSP, PS2 e SNES. É possível alternar entre esses layouts nas ' +
         'configurações.',
-      src: '/img/projects/mobystk-layouts.gif',
+      src: '/img/projects/mobystk/mobystk-layouts.gif',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.typescript, TECHNOLOGIES.esbuild]
     },
     {
       title: 'Suporte a múltiplos toques',
       description: 'O MobyStk foi projetado para reconhecer múltiplos toques simultâneos.',
-      src: '/img/projects/mobystk-multi-touch.gif',
+      src: '/img/projects/mobystk/mobystk-multi-touch.gif',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.typescript, TECHNOLOGIES.esbuild]
     },
     {
@@ -53,14 +53,14 @@ export const MOBYSTK: IProject = {
       description:
         'Nas configurações do MobyStk, é possível selecionar o número do controle, escolher o layout, configurar ' +
         'comportamentos do controle, ocultar botões, aplicar temas e muito mais.',
-      src: '/img/projects/mobystk-configuracoes.webp',
+      src: '/img/projects/mobystk/mobystk-configuracoes.webp',
       technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.typescript, TECHNOLOGIES.esbuild]
     },
     {
       title: 'Aplicação do computador',
       description:
         'O aplicativo do MobyStk, desenvolvido em Python, é fácil de instalar e oferece uma interface intuitiva.',
-      src: '/img/projects/mobystk-server.webp',
+      src: '/img/projects/mobystk/mobystk-server.webp',
       technologies: [TECHNOLOGIES.python]
     }
   ]
