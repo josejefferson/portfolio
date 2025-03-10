@@ -2,12 +2,11 @@ import { Badge } from '#/components/common/badge'
 import FormattedText from '#/components/common/formatted-text'
 import Link from '#/components/common/link'
 import { IProject } from '#/data/projects'
-import { AspectRatio, Box, Button, Flex, Heading, chakra } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Flex, Heading, Image, chakra } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io'
 import { MdOpenInNew } from 'react-icons/md'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { ChakraNextImage } from '../common/image'
 import { Technology } from '../common/technology'
 import { TruncateText } from '../common/truncate-text'
 
@@ -55,8 +54,10 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           {project.images.map((image, i) => (
             <SwiperSlide key={i}>
               <AspectRatio ratio={16 / 9} w="full" bg="black">
-                <ChakraNextImage
-                  src={image}
+                <Image
+                  src={image.src}
+                  width={image.width}
+                  height={image.height}
                   alt=""
                   rounded="lg"
                   h="full"
