@@ -25,7 +25,7 @@ export function ImageDetails({ currentImage }: { currentImage: number }) {
               <Heading as="h2" size="lg" mb={2}>
                 {image.title}
               </Heading>
-              <FormattedText align="justify">{image.description}</FormattedText>
+              <FormattedText textAlign="justify">{image.description}</FormattedText>
             </Flex>
             <Flex
               maxW="calc(var(--chakra-sizes-7) * 4 + var(--chakra-space-1) * 3)"

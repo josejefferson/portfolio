@@ -117,7 +117,7 @@ function Photo(props: BoxProps) {
   return (
     <Box position="relative" w="fit-content" m="auto" aria-hidden {...props}>
       <Image
-        src={`https://github.com/${GITHUB}.png`}
+        src="/img/github-avatar.webp"
         alt={`Imagem do GitHub de ${NAME}`}
         rounded="full"
         w={{ base: '20em', lg: '30em' }}

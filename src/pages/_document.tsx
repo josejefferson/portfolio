@@ -1,4 +1,4 @@
-import { DESCRIPTION, GITHUB, JOB_NAME, KEYWORDS, NAME, PORTFOLIO_URL } from '#/data/info'
+import { DESCRIPTION, JOB_NAME, KEYWORDS, NAME, PORTFOLIO_URL } from '#/data/info'
 import { ColorModeScript } from '@chakra-ui/react'
 import { Head, Html, Main, NextScript } from 'next/document'
 
@@ -6,9 +6,7 @@ export default function Document() {
   return (
     <Html lang="pt-BR">
       <Head>
-        <meta charSet="utf-8" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="icon" type="image/png" sizes="32x32" href={`https://github.com/${GITHUB}.png`} />
+        <link rel="icon" href="/img/favicon.png" type="image/png" sizes="32x32" />
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
 
         {/* Meta tags */}

@@ -1,3 +1,7 @@
+import adiantarAulasImg from '../../assets/images/projects/vagazero/vagazero-adiantar-aulas.webp'
+import demonstracaoImg from '../../assets/images/projects/vagazero/vagazero-demonstracao.webp'
+import faltarAulasImg from '../../assets/images/projects/vagazero/vagazero-faltar-aulas.webp'
+import telaInicialImg from '../../assets/images/projects/vagazero/vagazero-tela-inicial.webp'
 import { BADGES } from '../badges'
 import { IProject } from '../projects'
 import { TECHNOLOGIES } from '../technologies'
@@ -12,11 +16,7 @@ export const VAGAZERO: IProject = {
     'além de selecionar os horários livres disponíveis para ministrar as aulas pendentes. Além disso, os ' +
     'coordenadores têm acesso ao registro de faltas, permitindo uma gestão mais eficiente e transparente do quadro ' +
     'de docentes.',
-  images: [
-    '/img/projects/vagazero/vagazero-tela-inicial.webp',
-    '/img/projects/vagazero/vagazero-adiantar-aulas.webp',
-    '/img/projects/vagazero/vagazero-faltar-aulas.webp'
-  ],
+  images: [telaInicialImg, adiantarAulasImg, faltarAulasImg],
   mainTechnologies: [
     TECHNOLOGIES.nodejs,
     TECHNOLOGIES.typescript,
@@ -58,20 +58,20 @@ export const VAGAZERO: IProject = {
       description:
         'Aqui está um exemplo de como um professor pode registrar suas faltas e adiantamentos de aulas de forma ' +
         'simples e eficiente no sistema.',
-      src: '/img/projects/vagazero/vagazero-demonstracao.webp'
+      src: demonstracaoImg
     },
     {
       title: 'Tela inicial',
       description:
         'Nesta seção, é apresentado um resumo das faltas e aulas adiantadas do professor, além de botões intuitivos ' +
         'que permitem que ele registre suas faltas ou adiante aulas com facilidade.',
-      src: '/img/projects/vagazero/vagazero-tela-inicial.webp',
+      src: telaInicialImg,
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.nextjs, TECHNOLOGIES.dayJS]
     },
     {
       title: 'Faltar aulas',
       description: 'Nesta seção, o professor pode selecionar os horários em que deseja faltar.',
-      src: '/img/projects/vagazero/vagazero-faltar-aulas.webp',
+      src: faltarAulasImg,
       technologies: [
         TECHNOLOGIES.chakraUI,
         TECHNOLOGIES.react,
@@ -85,7 +85,7 @@ export const VAGAZERO: IProject = {
     {
       title: 'Adiantar aulas',
       description: 'Nesta área, o professor pode selecionar os horários disponíveis para adiantar suas aulas.',
-      src: '/img/projects/vagazero/vagazero-adiantar-aulas.webp',
+      src: adiantarAulasImg,
       technologies: [
         TECHNOLOGIES.chakraUI,
         TECHNOLOGIES.react,

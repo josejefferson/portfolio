@@ -12,7 +12,7 @@ export default function About() {
             <CardBody fontSize="lg" textAlign="justify">
               <chakra.p>
                 <Image
-                  src={`https://github.com/${GITHUB}.png`}
+                  src="/img/github-avatar.webp"
                   alt={`Imagem do GitHub de ${NAME}`}
                   rounded="lg"
                   w={{ base: 16, sm: 100 }}

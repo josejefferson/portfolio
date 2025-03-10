@@ -9,12 +9,15 @@ export type LinkProps = NextLinkProps &
   }
 
 const Link = forwardRef((props: LinkProps, ref) => {
-  if (!props.href) return <chakra.span {...props} ref={ref} />
+  const { href, target, underline, ...otherProps } = props
+  if (!href) return <chakra.div display="inline" {...otherProps} ref={ref} />
 
   return (
     <ChakraLink
       as={NextLink}
-      {...props}
+      href={href}
+      target={target}
+      {...otherProps}
       ref={ref}
       _hover={{ textDecoration: props.underline ? 'underline' : 'none' }}
     />

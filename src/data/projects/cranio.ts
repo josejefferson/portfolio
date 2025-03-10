@@ -1,3 +1,9 @@
+import administracaoImg from '../../assets/images/projects/cranio/cranio-administracao.webp'
+import anunciosImg from '../../assets/images/projects/cranio/cranio-anuncios.webp'
+import desafioImg from '../../assets/images/projects/cranio/cranio-desafio.webp'
+import desafiosImg from '../../assets/images/projects/cranio/cranio-desafios.webp'
+import digiteMatriculaImg from '../../assets/images/projects/cranio/cranio-digite-matricula.webp'
+import telaInicialImg from '../../assets/images/projects/cranio/cranio-tela-inicial.webp'
 import { BADGES } from '../badges'
 import { IProject } from '../projects'
 import { TECHNOLOGIES } from '../technologies'
@@ -16,7 +22,7 @@ export const CRANIO: IProject = {
     'a um monitor e um teclado numérico. Isso permite que os alunos visualizem os avisos no mural e interajam ' +
     'facilmente com o jogo de perguntas. Quando um aluno responde a uma pergunta corretamente, o sistema envia ' +
     'automaticamente um e-mail ao professor notificando-o da resposta correta.',
-  images: ['/img/projects/cranio/cranio-tela-inicial.webp'],
+  images: [telaInicialImg],
   mainTechnologies: [
     TECHNOLOGIES.typescript,
     TECHNOLOGIES.nextjs,
@@ -53,7 +59,7 @@ export const CRANIO: IProject = {
         'Nesta página, os anúncios ativos são exibidos de forma dinâmica, deslizando pela tela. Na parte inferior, é ' +
         'exibido o número de desafios de perguntas disponíveis para resposta, incentivando a participação dos alunos.',
       technologies: [TECHNOLOGIES.bootstrap, TECHNOLOGIES.react, TECHNOLOGIES.nextjs, TECHNOLOGIES.typescript],
-      src: '/img/projects/cranio/cranio-tela-inicial.webp'
+      src: telaInicialImg
     },
     {
       title: 'Identificação',
@@ -62,7 +68,7 @@ export const CRANIO: IProject = {
         'curso. Caso haja algum desafio disponível, ele será iniciado imediatamente, facilitando a participação dos ' +
         'alunos de forma direcionada e personalizada. Cada aluno só poderá realizar 1 desafio por dia.',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.typescript, TECHNOLOGIES.mongodb],
-      src: '/img/projects/cranio/cranio-digite-matricula.webp'
+      src: digiteMatriculaImg
     },
     {
       title: 'Desafio',
@@ -72,7 +78,7 @@ export const CRANIO: IProject = {
         'encerrado automaticamente e um e-mail é enviado ao professor responsável pelo desafio, informando o acerto ' +
         'e o aluno que respondeu corretamente.',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.typescript, TECHNOLOGIES.mongodb],
-      src: '/img/projects/cranio/cranio-desafio.webp'
+      src: desafioImg
     },
     {
       title: 'Administração',
@@ -80,7 +86,7 @@ export const CRANIO: IProject = {
         'Nesta área, o responsável pelo sistema pode cadastrar novos anúncios e desafios, garantindo a atualização e ' +
         'diversificação do conteúdo disponível para os alunos.',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.typescript],
-      src: '/img/projects/cranio/cranio-administracao.webp'
+      src: administracaoImg
     },
     {
       title: 'Administração / Anúncios',
@@ -89,7 +95,7 @@ export const CRANIO: IProject = {
         'relevantes. É possível criar, editar e excluir anúncios diretamente nesta interface, proporcionando ' +
         'flexibilidade na gestão do conteúdo exibido aos usuários.',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.typescript, TECHNOLOGIES.mongodb],
-      src: '/img/projects/cranio/cranio-anuncios.webp'
+      src: anunciosImg
     },
     {
       title: 'Administração / Desafios',
@@ -99,7 +105,7 @@ export const CRANIO: IProject = {
         'e excluir desafios diretamente nesta interface, garantindo uma gestão ágil e precisa do conteúdo disponível ' +
         'para os usuários.',
       technologies: [TECHNOLOGIES.chakraUI, TECHNOLOGIES.react, TECHNOLOGIES.typescript, TECHNOLOGIES.mongodb],
-      src: '/img/projects/cranio/cranio-desafios.webp'
+      src: desafiosImg
     }
   ]
 }

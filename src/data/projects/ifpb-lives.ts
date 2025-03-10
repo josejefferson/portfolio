@@ -1,3 +1,6 @@
+import administracaoImg from '../../assets/images/projects/ifpblives/ifpblives-administracao.webp'
+import opcoesImg from '../../assets/images/projects/ifpblives/ifpblives-opcoes.webp'
+import telaInicialImg from '../../assets/images/projects/ifpblives/ifpblives-tela-inicial.webp'
 import { BADGES } from '../badges'
 import { IProject } from '../projects'
 import { TECHNOLOGIES } from '../technologies'
@@ -14,10 +17,7 @@ export const IFPB_LIVES: IProject = {
     'IFPB", um site que centraliza e organiza essas aulas. Com um sistema de cadastro integrado, os usuários podem ' +
     'receber notificações automáticas sempre que novas transmissões estiverem disponíveis, garantindo acesso fácil ' +
     'e oportuno ao conteúdo educacional oferecido pela instituição durante esse período desafiador.',
-  images: [
-    '/img/projects/ifpblives/ifpblives-tela-inicial.webp',
-    '/img/projects/ifpblives/ifpblives-administracao.webp'
-  ],
+  images: [telaInicialImg, administracaoImg],
   technologies: [
     TECHNOLOGIES.javascript,
     TECHNOLOGIES.nodejs,
@@ -34,13 +34,13 @@ export const IFPB_LIVES: IProject = {
         'possui uma caixa de seleção para que os alunos possam marcar as aulas já assistidas. Além disso, há um ' +
         'botão para filtrar a lista por disciplina. No lado direito, está o cronograma das aulas e algumas ' +
         'observações adicionais.',
-      src: '/img/projects/ifpblives/ifpblives-tela-inicial.webp',
+      src: telaInicialImg,
       technologies: [TECHNOLOGIES.bootstrap, TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript]
     },
     {
       title: 'Administração',
       description: 'Na tela de administração, os professores têm a capacidade de adicionar novas aulas.',
-      src: '/img/projects/ifpblives/ifpblives-administracao.webp',
+      src: administracaoImg,
       technologies: [
         TECHNOLOGIES.bootstrap,
         TECHNOLOGIES.html,
@@ -55,7 +55,7 @@ export const IFPB_LIVES: IProject = {
       description:
         'Nesta seção de administração, os professores podem enviar notificações personalizadas aos alunos, bem como ' +
         'importar e exportar a lista de aulas.',
-      src: '/img/projects/ifpblives/ifpblives-opcoes.webp',
+      src: opcoesImg,
       technologies: [
         TECHNOLOGIES.bootstrap,
         TECHNOLOGIES.html,

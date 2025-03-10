@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { IBadge } from './badges'
 import { IConcept } from './concepts'
 import { CHATBOT } from './projects/chatbot'
@@ -16,7 +17,7 @@ export interface IProject {
   id?: string
   name: string
   description: string
-  images: string[]
+  images: StaticImageData[]
   mainTechnologies?: ITechnology[]
   technologies: ITechnology[]
   link?: string
@@ -24,7 +25,7 @@ export interface IProject {
   badges?: IBadge[]
   concepts?: IConcept[]
   detailImages?: {
-    src: string
+    src: StaticImageData
     title: string
     description?: string
     technologies?: ITechnology[]

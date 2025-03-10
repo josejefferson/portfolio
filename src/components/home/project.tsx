@@ -2,11 +2,12 @@ import { Badge } from '#/components/common/badge'
 import FormattedText from '#/components/common/formatted-text'
 import Link from '#/components/common/link'
 import { IProject } from '#/data/projects'
-import { AspectRatio, Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Flex, Heading, chakra } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io'
 import { MdOpenInNew } from 'react-icons/md'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { ChakraNextImage } from '../common/image'
 import { Technology } from '../common/technology'
 import { TruncateText } from '../common/truncate-text'
 
@@ -54,7 +55,14 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           {project.images.map((image, i) => (
             <SwiperSlide key={i}>
               <AspectRatio ratio={16 / 9} w="full" bg="black">
-                <Image src={image} alt="" rounded="lg" h="full" sx={{ objectFit: 'scale-down !important' }} />
+                <ChakraNextImage
+                  src={image}
+                  alt=""
+                  rounded="lg"
+                  h="full"
+                  sx={{ objectFit: 'scale-down !important' }}
+                  loading="lazy"
+                />
               </AspectRatio>
             </SwiperSlide>
           ))}
@@ -66,9 +74,16 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           {project.badges?.map((badge, i) => <Badge {...badge} key={i} />)}
         </Flex>
 
-        <Heading as="h3" mb={3}>
-          {project.name}
-        </Heading>
+        <chakra.h3 mb={3}>
+          <Heading
+            as={Link}
+            href={project.id ? `/projeto/${project.id}` : project.link || project.github}
+            underline
+            isExternal={!project.id}
+          >
+            {project.name}
+          </Heading>
+        </chakra.h3>
 
         <Box width="100px" mb={3} bg="white" h="1px" className="heading-line" />
 

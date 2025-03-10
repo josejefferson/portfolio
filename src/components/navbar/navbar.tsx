@@ -46,12 +46,13 @@ export default function Navbar() {
                 position="relative"
               >
                 <Avatar
-                  src={`https://github.com/${GITHUB}.png`}
+                  src="/img/github-avatar.webp"
                   size="sm"
                   name={`Imagem do GitHub de ${NAME}`}
                   getInitials={() => ''}
                   bg="gray.500"
                   aria-hidden
+                  ignoreFallback
                 />
                 <Text fontWeight={500} px={2} hidden={!breakpointLg} aria-hidden>
                   {project?.name || NAME}

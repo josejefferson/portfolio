@@ -1,3 +1,7 @@
+import telegramSitesImg from '../../assets/images/projects/chatbot/chatbot-telegram-sites.webp'
+import webCursosImg from '../../assets/images/projects/chatbot/chatbot-web-cursos.webp'
+import webInscricaoImg from '../../assets/images/projects/chatbot/chatbot-web-inscricao.webp'
+import webOiImg from '../../assets/images/projects/chatbot/chatbot-web-oi.webp'
 import { BADGES } from '../badges'
 import { IProject } from '../projects'
 import { TECHNOLOGIES } from '../technologies'
@@ -12,11 +16,7 @@ export const CHATBOT: IProject = {
     'suporte através de múltiplas plataformas, como WhatsApp, Telegram e pelo site. Utilizando a plataforma ' +
     'Dialogflow, o bot identifica as intenções dos usuários, garantindo respostas precisas e relevantes para suas ' +
     'perguntas.',
-  images: [
-    '/img/projects/chatbot/chatbot-web-oi.webp',
-    '/img/projects/chatbot/chatbot-telegram-sites.webp',
-    '/img/projects/chatbot/chatbot-web-cursos.webp'
-  ],
+  images: [webOiImg, telegramSitesImg, webCursosImg],
   technologies: [
     TECHNOLOGIES.dialogflow,
     TECHNOLOGIES.typescript,
@@ -27,21 +27,9 @@ export const CHATBOT: IProject = {
     TECHNOLOGIES.chakraUI
   ],
   detailImages: [
-    {
-      title: 'Tela Inicial do Site',
-      src: '/img/projects/chatbot/chatbot-web-oi.webp'
-    },
-    {
-      title: 'Chatbot no Telegram',
-      src: '/img/projects/chatbot/chatbot-telegram-sites.webp'
-    },
-    {
-      title: 'Perguntas ao Chatbot',
-      src: '/img/projects/chatbot/chatbot-web-cursos.webp'
-    },
-    {
-      title: 'Fluxo de Conversa',
-      src: '/img/projects/chatbot/chatbot-web-inscricao.webp'
-    }
+    { title: 'Tela Inicial do Site', src: webOiImg },
+    { title: 'Chatbot no Telegram', src: telegramSitesImg },
+    { title: 'Perguntas ao Chatbot', src: webCursosImg },
+    { title: 'Fluxo de Conversa', src: webInscricaoImg }
   ]
 }

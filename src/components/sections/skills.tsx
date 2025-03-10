@@ -1,6 +1,5 @@
 import { ISkillCategory, SKILLS } from '#/data/skills'
 import {
-  Box,
   Card,
   CardBody,
   CardHeader,
@@ -9,14 +8,13 @@ import {
   Flex,
   Heading,
   Image,
-  Progress,
   SimpleGrid,
-  Text
+  chakra
 } from '@chakra-ui/react'
 import { InView } from 'react-intersection-observer'
 import { SECTION_IDS } from '.'
-import Section from '../common/section'
 import Link from '../common/link'
+import Section from '../common/section'
 
 export default function Skills() {
   return (
@@ -78,9 +76,9 @@ function SkillCard({ skillCategory }: ISkillCardProps) {
                   objectFit="contain"
                   aria-hidden
                 />
-                <Text fontWeight={500} role="presentation" className="skill-name">
+                <chakra.span fontWeight={500} role="presentation" className="skill-name">
                   {item.technology.name}
-                </Text>
+                </chakra.span>
               </Flex>
             ))}
           </CardBody>
