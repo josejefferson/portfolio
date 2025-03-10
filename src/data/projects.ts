@@ -6,6 +6,7 @@ import { IFPB_LIVES } from './projects/ifpb-lives'
 import { LAMPYS } from './projects/lampys'
 import { MOBYSTK } from './projects/mobystk'
 import { SPEAK_MEET_MESSAGES } from './projects/speak-meet-messages'
+import { TOTP } from './projects/totp'
 import { UNO } from './projects/uno'
 import { VAGAZERO } from './projects/vagazero'
 import { WEDDYTOR } from './projects/weddytor'
@@ -38,6 +39,7 @@ export const PROJECTS: IProject[] = [
   CRANIO,
   IFPB_LIVES,
   SPEAK_MEET_MESSAGES,
+  TOTP,
   MOBYSTK,
   WEDDYTOR,
   UNO

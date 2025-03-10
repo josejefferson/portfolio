@@ -9,8 +9,8 @@ export const TECHNOLOGY_TYPES = {
     namePlural: 'Plataformas'
   },
   language: {
-    name: 'Linguagem de programação',
-    namePlural: 'Linguagens de programação'
+    name: 'Linguagem',
+    namePlural: 'Linguagens'
   },
   framework: {
     name: 'Framework',

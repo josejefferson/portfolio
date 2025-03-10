@@ -6,6 +6,7 @@ const PROJECT_PATHS = [
   '/projeto/ifpb-lives',
   '/projeto/speak-meet-messages',
   '/projeto/mobystk',
+  '/projeto/totp',
   '/projeto/weddytor',
   '/projeto/uno'
 ]
