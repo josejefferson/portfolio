@@ -33,6 +33,7 @@ function ScrollToSeeMore() {
       fontWeight={200}
       opacity={isVisible ? 1 : 0}
       transition="opacity .2s ease"
+      aria-hidden
     >
       Role a página para mais informações
     </Text>
@@ -42,20 +43,20 @@ function ScrollToSeeMore() {
 function Details() {
   return (
     <Box my="auto" textAlign={{ base: 'center', md: 'left' }} fontSize={{ base: '0.65rem', sm: '0.75rem', md: '1rem' }}>
-      <Heading fontSize="e4xl" mb={4}>
+      <Heading as="div" fontSize="e4xl" mb={4}>
         Olá! Eu sou
       </Heading>
 
       <Photo display={{ base: 'block', md: 'none' }} mb={4} />
 
       <Box w="fit-content" mx={{ base: 'auto', md: 0 }} mb={4}>
-        <Heading fontSize="e6xl" color="primary.500" mb={2}>
+        <Heading as="h1" fontSize="e6xl" color="primary.500" mb={2}>
           {NAME}
         </Heading>
         <Box bg="primary.500" h={1.5} rounded="full" />
       </Box>
 
-      <Heading fontSize="e4xl" fontWeight={200} mb={4}>
+      <Heading as="div" fontSize="e4xl" fontWeight={200} mb={4}>
         Desenvolvedor web full-stack
       </Heading>
 
@@ -65,7 +66,7 @@ function Details() {
             as={Link}
             href={`https://github.com/${GITHUB}`}
             target="_blank"
-            aria-label="GitHub"
+            aria-label="Acessar meu GitHub"
             size="lg"
             variant="outline"
             color="white"
@@ -81,7 +82,7 @@ function Details() {
             as={Link}
             href={`https://www.linkedin.com/in/${LINKEDIN}/`}
             target="_blank"
-            aria-label="LinkedIn"
+            aria-label="Acessar meu LinkedIn"
             size="lg"
             variant="outline"
             colorScheme="linkedin"
@@ -97,7 +98,7 @@ function Details() {
             as={Link}
             href="/attachments/Currículo - Jefferson Dantas.pdf"
             target="_blank"
-            aria-label="GitHub"
+            aria-label="Baixar meu currículo em PDF"
             size="lg"
             variant="outline"
             colorScheme="red"
@@ -114,10 +115,10 @@ function Details() {
 
 function Photo(props: BoxProps) {
   return (
-    <Box position="relative" w="fit-content" m="auto" {...props}>
+    <Box position="relative" w="fit-content" m="auto" aria-hidden {...props}>
       <Image
         src={`https://github.com/${GITHUB}.png`}
-        aria-label={`Imagem do GitHub de ${NAME}`}
+        alt={`Imagem do GitHub de ${NAME}`}
         rounded="full"
         w={{ base: '20em', lg: '30em' }}
         shadow="md"

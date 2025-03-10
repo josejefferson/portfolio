@@ -36,9 +36,24 @@ export default function Navbar() {
           <HStack spacing="10" justify="space-between">
             <HStack>
               <NavDrawer />
-              <HStack as={Link} href="/" borderWidth={1} rounded="full" p={1} position="relative">
-                <Avatar src={`https://github.com/${GITHUB}.png`} size="sm" />
-                <Text fontWeight={500} px={2} hidden={!breakpointLg}>
+              <HStack
+                as={Link}
+                href="/"
+                aria-label="Retornar à página inicial"
+                borderWidth={1}
+                rounded="full"
+                p={1}
+                position="relative"
+              >
+                <Avatar
+                  src={`https://github.com/${GITHUB}.png`}
+                  size="sm"
+                  name={`Imagem do GitHub de ${NAME}`}
+                  getInitials={() => ''}
+                  bg="gray.500"
+                  aria-hidden
+                />
+                <Text fontWeight={500} px={2} hidden={!breakpointLg} aria-hidden>
                   {project?.name || NAME}
                 </Text>
               </HStack>

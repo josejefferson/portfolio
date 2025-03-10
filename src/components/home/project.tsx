@@ -2,7 +2,7 @@ import { Badge } from '#/components/common/badge'
 import FormattedText from '#/components/common/formatted-text'
 import Link from '#/components/common/link'
 import { IProject } from '#/data/projects'
-import { AspectRatio, Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io'
 import { MdOpenInNew } from 'react-icons/md'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
@@ -66,7 +66,9 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           {project.badges?.map((badge, i) => <Badge {...badge} key={i} />)}
         </Flex>
 
-        <Heading mb={3}>{project.name}</Heading>
+        <Heading as="h3" mb={3}>
+          {project.name}
+        </Heading>
 
         <Box width="100px" mb={3} bg="white" h="1px" className="heading-line" />
 
@@ -74,9 +76,10 @@ export function Project({ project, i }: { project: IProject; i: number }) {
           <TruncateText>{project.description}</TruncateText>
         </FormattedText>
 
-        <Heading size="sm" mb={2}>
+        <Heading as="h4" size="sm" my={2}>
           Principais tecnologias utilizadas
         </Heading>
+
         <Flex gap={2} mb={5} flexWrap="wrap">
           {(project.mainTechnologies || project.technologies)?.map((tech, i) => <Technology tech={tech} key={i} />)}
         </Flex>
@@ -84,6 +87,7 @@ export function Project({ project, i }: { project: IProject; i: number }) {
         <Heading size="sm" mb={2} hidden={!project.concepts?.length}>
           Conceitos utilizados
         </Heading>
+
         <Flex gap={1} mb={5} flexWrap="wrap" hidden={!project.concepts?.length}>
           {project.concepts?.map((concept, i) => (
             <Box bg="gray.600" fontSize="xs" borderRadius="full" py={0.5} px={2} key={i}>
@@ -101,13 +105,22 @@ export function Project({ project, i }: { project: IProject; i: number }) {
             mb={2}
             colorScheme="green"
             leftIcon={<MdOpenInNew size={24} />}
+            aria-label={`Abrir página do projeto ${project.name}`}
           >
             Abrir
           </Button>
         )}
 
         {project.id && (
-          <Button as={Link} href={`/projeto/${project.id}`} mr={2} mb={2} colorScheme="blue" variant="outline">
+          <Button
+            as={Link}
+            href={`/projeto/${project.id}`}
+            mr={2}
+            mb={2}
+            colorScheme="blue"
+            variant="outline"
+            aria-label={`Detalhes do projeto ${project.name}`}
+          >
             Detalhes
           </Button>
         )}

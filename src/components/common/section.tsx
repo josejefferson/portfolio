@@ -39,9 +39,23 @@ interface ISectionTitleProps {
 export function SectionTitle({ title, color }: ISectionTitleProps) {
   return (
     <Container maxW="6xl">
-      <Box fontSize={{ base: 36, md: 50 }} textAlign="center" color={color} fontFamily="monospace" pt={12} pb={6}>
-        <chakra.span color="gray">&lt;</chakra.span>
-        {title} <chakra.span color="gray">/&gt;</chakra.span>
+      <Box
+        as="h2"
+        aria-label={title}
+        fontSize={{ base: 36, md: 50 }}
+        textAlign="center"
+        color={color}
+        fontFamily="monospace"
+        pt={12}
+        pb={6}
+      >
+        <chakra.span color="gray" aria-hidden>
+          &lt;
+        </chakra.span>
+        {title}{' '}
+        <chakra.span color="gray" aria-hidden>
+          /&gt;
+        </chakra.span>
       </Box>
     </Container>
   )

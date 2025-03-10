@@ -17,6 +17,7 @@ export default function ScrollToTop() {
   return (
     <IconButton
       aria-label="Rolar para o topo da página"
+      aria-hidden
       rounded="full"
       position="fixed"
       bottom={5}

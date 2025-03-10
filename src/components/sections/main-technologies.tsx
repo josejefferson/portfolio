@@ -43,8 +43,8 @@ export function TechnologyCard({ tech }: { tech: IMainTechnology }) {
         _active={{ bg: `${cardColor}.700` }}
         transition=".2s ease"
       >
-        <Image src={technology.image} alt={technology.name} w="full" aspectRatio={1 / 1} objectFit="contain" />
-        <Text fontSize={{ base: 'md', sm: 'xl' }} mt={{ base: 2, sm: 4 }}>
+        <Image src={technology.image} alt="" aria-hidden w="full" aspectRatio={1 / 1} objectFit="contain" />
+        <Text fontSize={{ base: 'md', sm: 'xl' }} mt={{ base: 2, sm: 4 }} role="presentation">
           {technology.name}
         </Text>
       </Card>

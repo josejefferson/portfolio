@@ -11,7 +11,7 @@ export default function Social() {
           as={Link}
           href={`https://github.com/${GITHUB}`}
           target="_blank"
-          aria-label="GitHub"
+          aria-label="Acessar meu GitHub"
           size="sm"
           variant="ghost"
           color="white"
@@ -20,12 +20,13 @@ export default function Social() {
           <IoLogoGithub size={24} />
         </IconButton>
       </Tooltip>
+
       <Tooltip label="Acesse meu LinkedIn" placement="bottom">
         <IconButton
           as={Link}
           href={`https://www.linkedin.com/in/${LINKEDIN}/`}
           target="_blank"
-          aria-label="LinkedIn"
+          aria-label="Acessar meu LinkedIn"
           size="sm"
           variant="ghost"
           colorScheme="linkedin"

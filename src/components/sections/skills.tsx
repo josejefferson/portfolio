@@ -50,7 +50,9 @@ function SkillCard({ skillCategory }: ISkillCardProps) {
           className={inView ? 'skill-card animate-skill' : 'skill-card'}
         >
           <CardHeader textAlign="center">
-            <Heading size="md">{title}</Heading>
+            <Heading as="h3" size="md">
+              {title}
+            </Heading>
           </CardHeader>
 
           <Divider borderWidth={1} />
@@ -74,8 +76,9 @@ function SkillCard({ skillCategory }: ISkillCardProps) {
                   src={item.technology.image}
                   alt="Ícone"
                   objectFit="contain"
+                  aria-hidden
                 />
-                <Text fontWeight={500} className="skill-name">
+                <Text fontWeight={500} role="presentation" className="skill-name">
                   {item.technology.name}
                 </Text>
               </Flex>

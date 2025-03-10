@@ -1,4 +1,5 @@
 import { NAME } from '#/data/contact'
+import { SkipNavContent } from '@chakra-ui/react'
 import Head from 'next/head'
 import { PropsWithChildren } from 'react'
 import Footer from '../footer/footer'
@@ -23,7 +24,10 @@ export default function Page({ children, title }: IPageProps) {
         <title>{pageTitle}</title>
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main>
+        <SkipNavContent />
+        {children}
+      </main>
       <Footer />
     </>
   )

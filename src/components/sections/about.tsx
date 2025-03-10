@@ -13,7 +13,7 @@ export default function About() {
               <chakra.p>
                 <Image
                   src={`https://github.com/${GITHUB}.png`}
-                  aria-label={`Imagem do GitHub de ${NAME}`}
+                  alt={`Imagem do GitHub de ${NAME}`}
                   rounded="lg"
                   w={{ base: 16, sm: 100 }}
                   shadow="md"
@@ -21,6 +21,7 @@ export default function About() {
                   mr={2}
                   mb={2}
                   filter="grayscale(1)"
+                  aria-hidden
                 />
                 Prazer, eu sou <u>Jefferson Dantas</u>! Sou um entusiasta apaixonado por <b>programação web</b>, com
                 formação em informática pelo IFPB Campus Picuí. Atualmente, estou aprimorando meus conhecimentos,
@@ -47,7 +48,7 @@ export default function About() {
           <Flex h="full" align="center" display={{ base: 'none', md: 'flex' }}>
             <Image
               src="/img/languages.svg"
-              aria-label="Ilustração com as principais tecnologias que uso: JavaScript, TypeScript, Node.js, React, NextJS, Yarn e GitHub"
+              alt="Ilustração com as principais tecnologias que uso: JavaScript, TypeScript, Node.js, React, NextJS, Yarn e GitHub"
               w="full"
               maxW={400}
               mx="auto"
