@@ -22,7 +22,7 @@
     "@types/react": "18.2.45",
     "@types/react-dom": "18.2.18",
     "framer-motion": "^10.16.16",
-    "next": "14.0.4",
+    "next": "14.2.35",
     "next-sitemap": "^4.2.3",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
